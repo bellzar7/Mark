@@ -1,0 +1,33 @@
+.customContainer {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .customContainer {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .customContainer {
+    width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .customContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow: auto;
+  position: relative;
+}

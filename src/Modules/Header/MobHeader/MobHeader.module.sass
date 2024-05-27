@@ -1,0 +1,39 @@
+@import "../../../Constants/Variables"
+
+.wrap
+  position: sticky
+  top: 0
+  background: rgb(255, 255, 255, 0.7)
+  z-index: 1000
+  width: 100%
+  padding: 3px 0
+  backdrop-filter: blur(5px)
+  &_container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &_logo
+      width: 130px
+    &_closeBtn
+      margin: 20px
+      position: absolute
+      right: 0
+    &_modalWrap
+      padding: 20px 0 0
+      margin: 56px 0 46px
+      border-radius: 0.35rem
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 20px
+      &__link
+        color: #313131
+        font-family: 'Montserrat', sans-serif
+        font-size: 18px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+
+@media (min-width: 721px)
+  .wrap
+    display: none
