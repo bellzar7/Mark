@@ -1,94 +1,19 @@
+import { BrowserRouter } from 'react-router-dom'
+import ReCAPTCHA from 'react-google-recaptcha'
+
 import './App.css'
-import { Header } from './Modules'
+import { AppRouter } from './Components'
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+      <ReCAPTCHA
+        sitekey="6LceyBUpAAAAAJhzgCCekeruQ63xiMwp_9L5pfbo"
+        size="invisible"
+      />
     </div>
   )
 }

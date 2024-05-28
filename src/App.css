@@ -30,4 +30,5 @@ body::-webkit-scrollbar {
 body {
   overflow: auto;
   position: relative;
+  background: #000!important;
 }

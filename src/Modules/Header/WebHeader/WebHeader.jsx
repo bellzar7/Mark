@@ -43,6 +43,20 @@ const WebHeader = () => {
     >
       <div className={`customContainer ${styles.container}`}>
         <img src={logo} alt="logo" className={styles.container_logo} />
+        <div>
+          <nav>
+            <Link>Послуги</Link>
+            <Link>Кейси</Link>
+            <Link>Про нас</Link>
+            <Link>Про нас</Link>
+            <Link>Контакти</Link>
+          </nav>
+          <div></div>
+          <div>
+            <div></div>
+            <button></button>
+          </div>
+        </div>
       </div>
     </header>
   )

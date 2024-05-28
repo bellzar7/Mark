@@ -1,0 +1,4 @@
+const WEBSITE_ROUTE = '/'
+const ERROR_ROUTE = '/404'
+
+export { WEBSITE_ROUTE, ERROR_ROUTE }
