@@ -1,0 +1,193 @@
+{
+  "header": {
+    "headerCompanyLog": "Logistics Company",
+    "headerCompany": "Ud Line",
+    "headerCenterText1": "Services",
+    "headerCenterText2": "About Us",
+    "headerCenterText3": "Contacts"
+  },
+  "Title": {
+    "article": "We carry out the boldest international transportation!",
+    "description": "Organization of export and import cargo delivery by various types and sizes of vehicles",
+    "button": "Calculate the cost",
+    "close": "Close"
+  },
+  "OurCase": {
+    "article": "Our Cases:",
+    "ambulance": "Ambulance",
+    "agrarian": "Agricultural products",
+    "car": "Cars Nissan Leaf",
+    "generators": "Industrial generators for the Armed Forces",
+    "sunpanel": "Solar panels",
+    "humanitarian": "Humanitarian help",
+    "description3": "Nissan Leaf cars",
+    "country1": "\uD83C\uDDE6\uD83C\uDDF1 Albania",
+    "country2": "\uD83C\uDDE7\uD83C\uDDEC Bulgaria",
+    "country3": "\uD83C\uDDE7\uD83C\uDDEA Belgium",
+    "country4": "\uD83C\uDDF9\uD83C\uDDF7 Turkey",
+    "mainCountry": "\uD83C\uDDFA\uD83C\uDDE6 Ukraine"
+  },
+  "OurTeam": {
+    "article": "Our Team:",
+    "articleBogdan": "Mazuryk Bohdan",
+    "telBogdan": "+380 (96) 791 29 79",
+    "descriptionBogdan": "CEO",
+    "articleKatya": "Zhaliuk Kateryna",
+    "descriptionKatya": "Sales/Logistics Department Manager",
+    "telKatya": "+380 (97) 893 21 99",
+    "articleZorya": "Bura Zoriana",
+    "descriptionZorya": "Logistics Manager",
+    "telZorya": "+380 (68) 496 30 80",
+    "articleNastya": "Anastasiia Vladimirova",
+    "descriptionNastya": "Logistics Manager",
+    "telNastya": "+380 (67) 196 50 97",
+    "articleArtem": "Vashai Artem",
+    "descriptionArtem": "Logistics Manager",
+    "telArtem": "+380 (67) 196 36 31",
+    "articleJulia": "Tsekhemeistruk Yuliia",
+    "descriptionJulia": "Logistics Manager",
+    "telJulia": "+380 (67) 196 56 19",
+    "articleAntonina": "Matviichuk Antonina",
+    "descriptionAntonina": "Logistics Manager",
+    "telAntonina": "+380 (67) 196 55 80",
+    "articleTanya": "Soroka Tetiana",
+    "descriptionTanya": "Sales Manager",
+    "telTanya": "+380 (67) 196 55 39"
+  },
+  "Advantage": {
+    "article": "Advantage:",
+    "trans": "Transportation",
+    "transText": "Own cargo transport and partner vehicles",
+    "quality": "Quality",
+    "qualityText": "Quality transportation of goods and their forwarding",
+    "personal": "Personal Approach",
+    "personalText": "Personal approach to solving any problem",
+    "insurance": "Insurance",
+    "insuranceText": "Insurance of your cargo",
+    "support": "24/7 Support",
+    "supportText": "Full support of the client from the beginning of transportation to delivery to the destination.",
+    "price": "Competitive Price",
+    "priceText": "Best prices in the transportation market"
+  },
+  "Clients": {
+    "title": "Our Clients:"
+  },
+  "Form": {
+    "contactTitle": "Contacts:",
+    "adressTitle": "Our adress:",
+    "adress": "Rivne, 19 Danyla Halytskogo Street",
+    "mediaTitle": "Our social media:",
+    "formTitle": "Leave an Inquiry",
+    "formText": "and we will contact you within 15 minutes!",
+    "namePlaceholder": "Enter your name",
+    "phonePlaceholder": "Enter your phone number",
+    "textPlaceholder": "Enter your comment",
+    "submit": "Submit",
+    "footerThanksTitle": "Thank you for your application, our manager will contact you soon!",
+    "footerThanksButton": "Fill out the form again",
+    "footerThanksTitleAfter": "Thank you for your application, our manager will contact you tomorrow at 9:00!",
+    "quizThanksTitle": "Thank you for your application, our manager will contact you shortly after calculating the cost!",
+    "quizThanksButton": "Retake the quiz",
+    "quizThanksTitleAfter": "Thank you for your application, our manager will contact you tomorrow from 9:00, after calculating the cost!"
+  },
+  "Faq": {
+    "question1": "In which directions do you organize transportation?",
+    "answer1": "We provide transportation services in various directions. Most of the transportation we do is international. However, if you are interested in transportation within Ukraine, you can confidently call us or submit a request for a quote, and our managers will assist you.",
+    "question2": "What is the delivery time for the cargo?",
+    "answer2": "The duration of delivery depends on the route, distance, and type of cargo. To get a specific delivery time, you can simply contact our staff, and they will accurately calculate the delivery time.",
+    "question3": "Do you have your own fleet of vehicles?",
+    "answer3": "Yes, we carry out the delivery of your cargo using both our own and leased vehicles.",
+    "question4": "What services do you provide?",
+    "answer4": "We provide a wide range of services, from seamless transportation of your cargo to logistics auditing. For safety purposes, we can also insure the cargo. If necessary, you can contact us for customs clearance.",
+    "question5": "What is the tariff for cargo transportation?",
+    "answer5": "This indicator depends on many factors, such as the route, type of cargo, type of transportation required for delivery, organization of additional services, and more. For a detailed calculation of the tariff for transporting your cargo, please submit a request for a quote or call us, and our managers will quickly and accurately calculate the cost."
+  },
+  "Services": {
+    "article": "Services:",
+    "title1": "International transportation by covered vehicles",
+    "title2": "Intercity transportation within Ukraine",
+    "title3": "Transportation of dangerous goods",
+    "title4": "Oversized transportation",
+    "title5": "Transportation of goods with temperature control",
+    "title6": "Consolidated shipments",
+    "button": "Order a Service"
+  },
+  "chooseTruck": {
+    "title":"We will pick up and send the transport for your cargo within 24 hours",
+    "button": "Calculate the cost",
+    "popup": {
+      "title":"We will pick up and send the transport for your cargo within 24 hours",
+      "nameInput": "*First Name, Last Name",
+      "phoneInput": "*Phone number",
+      "button": "Send an application"
+    }
+  },
+  "About": {
+    "article": "About Us:",
+    "description": "UDline is an international transport and logistics company. We offer organization of cargo transportation by road in Ukraine and abroad, regardless of the type and complexity of the cargo. Our main transportation routes include Ukraine, Poland, France, Germany, Netherlands, Czech Republic, Switzerland, Belgium, Spain, Portugal, Italy, Lithuania, Latvia, Kazakhstan, and Turkey.",
+    "title1": "Tons of Goods Transported per Year",
+    "title2": "Transportations per Year",
+    "title3": "Humanitarian Aid Delivered per Year",
+    "title4": "Countries We Work In",
+    "subtitle1": "40000+ tons",
+    "subtitle2": "2500+",
+    "subtitle3": "6800+ tons",
+    "subtitle4": "38+"
+  },
+  "Media": {
+    "article": "Find Us on Social Media:",
+    "description": "Follow us on social media to stay updated on interesting events, promotions, and updates from our logistics company!"
+  },
+  "Footer": {
+    "footerText": "website developed by"
+  },
+  "Countries": {
+    "SelectCountry": "Select Country",
+    "SelectCity": "Select City"
+  },
+  "Quiz": {
+    "titleUp": "Take the test in 1 minute",
+    "titleDown": "and find out the cost of transportation:",
+    "description": "Answer just a few questions...",
+    "togetherQuestion": "/ 2 questions",
+    "buttonPrev": "Preliminary question",
+    "buttonNext": "Next question",
+    "buttonSubmit": "Leave a request",
+    "question1": {
+      "question": "What type of cargo needs to be transported?",
+      "v1": "Awnings",
+      "v2": "Transportation of cargo\u2028with a temperature regime",
+      "v3": "Collective shipments",
+      "v4": "Transportation of dangerous\u2028goods",
+      "v5": "Oversized transportation",
+      "choose": "Choose an answer option and click the \"Next\" button"
+    },
+    "question2": {
+      "question": "How much cargo do you plan to transport?",
+      "volume": "Volume: ",
+      "weight": "Weight: ",
+      "kg": "kg"
+    },
+    "question3": {
+      "question": "Enter the route:",
+      "from": "From",
+      "to": "To"
+    },
+    "question4": {
+      "question": "How is it more convenient for you to receive a calculation?",
+      "v1": "By phone",
+      "v2": "Viber",
+      "v3": "Telegram",
+      "v4": "Email"
+    },
+    "question5": {
+      "question": "Fill out the form to receive a calculation:",
+      "placeholderName": "Name",
+      "placeholderTel": "Phone number",
+      "placeholderMail": "E-mail",
+      "errorMail": "Enter a valid email",
+      "errorName": "The field 'name' is mandatory,",
+      "errorName1": "enter a valid name (minimum length - 4 characters)"
+    }
+  }
+}
