@@ -1,9 +1,9 @@
 @import "../../../Constants/Variables"
-.wrapHidden
-  animation: slideOut 0.4s ease-out
-  transform: translateY(-117%)
-.wrapShow
-  animation: slideIn 0.4s ease-in
+//.wrapHidden
+//  animation: slideOut 0.4s ease-out
+//  transform: translateY(-117%)
+//.wrapShow
+//  animation: slideIn 0.4s ease-in
 .wrap
   position: sticky
   top: 12px
@@ -15,8 +15,8 @@
   justify-content: space-between
   padding: 16px 32px
   border-radius: 24px
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
-  background: #0C0C0C
+  background: rgba(13, 13, 13, 0.70)
+  backdrop-filter: blur(75px)
   gap: 10px
   &_logo
     width: 186px
@@ -105,7 +105,7 @@
   100%
     opacity: 1
 
-@media (max-width: 1440px)
+@media (max-width: 1820px)
   .container
     &_wrap
       margin-left: 36px
