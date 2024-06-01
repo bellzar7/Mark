@@ -7,17 +7,16 @@
 .wrap
   position: sticky
   top: 12px
-  background: $primary
+  backdrop-filter: blur(2px)
   z-index: 1000
 .container
   display: flex
   align-items: center
-  //justify-content: space-between
+  justify-content: space-between
   padding: 16px 32px
   border-radius: 24px
-  background: linear-gradient(0deg, #9C9C9C 0%, #9C9C9C 100%), rgba(13, 13, 13, 0.70)
-  background-blend-mode: overlay, normal
-  backdrop-filter: blur(75px)
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+  background: #0C0C0C
   gap: 10px
   &_logo
     width: 186px
@@ -30,18 +29,61 @@
     &__nav
       display: flex
       align-items: center
-      gap: 56px
-      & > *
+      justify-content: center
+      gap: 32px
+      &_item
         cursor: pointer
+        text-decoration: none
+        color: #FFF
+        text-align: center
+        font-family: "TT Norms Pro", sans-serif
+        font-size: 15px
+        font-style: normal
+        font-weight: 450
+        line-height: normal
+        position: relative
+        padding: 0 12px
+        &:hover
+          color: $accent
+          font-weight: 500
+        &:nth-of-type(4)
+          &::after
+            content: '+1'
+            position: absolute
+            right: 0
+            top: -12px
+            display: flex
+            padding: 2px 5px
+            justify-content: center
+            align-items: center
+            border-radius: 9999px
+            border: 1px solid $accent
+            background: #292A2D
+            color: $accent
+            text-align: center
+            font-family: 'Inter', sans-serif
+            font-size: 10px
+            font-style: normal
+            font-weight: 500
+            line-height: 10px
     &__center
       display: flex
       align-items: center
       gap: 6px
       &_anim
         animation: blink-animation 2.5s infinite
+      &_txt
+        color: #30DB5B
+        text-align: center
+        font-family: "TT Norms Pro", sans-serif
+        font-size: 16px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
     &__right
       display: flex
       align-items: center
+      gap: 20px
 
 
 @keyframes slideIn
@@ -63,7 +105,47 @@
   100%
     opacity: 1
 
+@media (max-width: 1440px)
+  .container
+    &_wrap
+      margin-left: 36px
+      &__nav
+        gap: 20px
+        &_item
+          font-size: 14px
+          font-weight: 450
+          padding: 0 12px
+          &:hover
+            color: $accent
+            font-weight: 500
+          &:nth-of-type(4)
+            &::after
+              content: '+1'
+              position: absolute
+              right: 0
+              top: -12px
+              display: flex
+              padding: 2px 5px
+              justify-content: center
+              align-items: center
+              border-radius: 9999px
+              border: 1px solid $accent
+              background: #292A2D
+              color: $accent
+              text-align: center
+              font-family: 'Inter', sans-serif
+              font-size: 10px
+              font-style: normal
+              font-weight: 500
+              line-height: 10px
+      &__center
+        display: none
+      &__right
+        display: flex
+        align-items: center
+        gap: 20px
 
+  
 @media (max-width: 720px)
   .container
     display: none

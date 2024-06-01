@@ -1,0 +1,76 @@
+.standard {
+  padding: 12px 48px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #19191C;
+  border: none;
+  box-sizing: border-box;
+  color: #FFF;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Gilroy", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+}
+.standard:hover {
+  background: linear-gradient(90deg, #00E0FF 0%, #0A2CE1 100%);
+}
+.standard:active {
+  background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
+}
+.standard_img {
+  margin-left: 8px;
+}
+
+.header {
+  padding: 12px 48px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #000;
+  border: none;
+  box-sizing: border-box;
+  color: #FFF;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Gilroy", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+}
+.header:hover {
+  background: linear-gradient(90deg, #00E0FF 0%, #0A2CE1 100%);
+}
+.header:active {
+  background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
+}
+.header_img {
+  margin-left: 8px;
+}
+
+.reject {
+  height: 44px;
+  padding: 12px 48px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  border: 1px solid #D0D5DD;
+  background: #FFF;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  color: #19191C;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Gilroy", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+}
+.reject:hover {
+  border: 1px solid #B7BCC5;
+  background: #F4F6F8;
+}
+.reject:active {
+  border: 1px solid #B7BCC5;
+  background: #e8e8e8;
+}
+
+/*# sourceMappingURL=CustomButton.module.css.map */

@@ -1,0 +1,71 @@
+.myLang :global(.dropdown-toggle) {
+  background: #151517;
+  border: none;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.myLang :global(.dropdown-toggle):global(:hover) {
+  background: #151517;
+}
+.myLang :global(.dropdown-toggle):global(:focus) {
+  background: #151517 !important;
+}
+.myLang :global(.dropdown-toggle):global(:active) {
+  background: #151517 !important;
+}
+.myLang :global(.dropdown-toggle) > img {
+  width: 26px;
+  height: 16px;
+  margin-right: 6px;
+}
+.myLang :global(.dropdown-toggle) > span {
+  color: #FFF;
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.myLang :global(.btn.show) {
+  background: #151517;
+}
+.myLang :global(.dropdown-menu.show) {
+  background: #151517;
+  min-width: 100%;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item) {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:hover) {
+  background: #444;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:focus) {
+  background: #444;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:active) {
+  background: #444;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item) > img {
+  width: 26px;
+  height: 16px;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item) > span {
+  color: #FFF;
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=LangDetector.module.css.map */

@@ -3,9 +3,13 @@ import styles from './WebHeader.module.css'
 import { Link } from 'react-scroll'
 import _ from 'lodash'
 import { logo } from '../../../Assets/Images'
-import { LangDecetor } from '../LangDecetor/LangDecetor'
+import { CustomButton, LangDetector } from '../../../Components'
+import { useTranslation } from 'react-i18next'
+import { btnArrow } from '../../../Assets/Icons'
 
 const WebHeader = () => {
+  const [t] = useTranslation()
+
   const [show, setShow] = useState(null)
 
   const controlNavBar = _.throttle(() => {
@@ -46,11 +50,21 @@ const WebHeader = () => {
         <img src={logo} alt="logo" className={styles.container_logo} />
         <div className={styles.container_wrap}>
           <nav className={styles.container_wrap__nav}>
-            <Link to={'asd'}>Послуги</Link>
-            <Link to={'asd'}>Кейси</Link>
-            <Link to={'asd'}>Про нас</Link>
-            <Link to={'asd'}>Вакансії</Link>
-            <Link to={'asd'}>Контакти</Link>
+            <Link to={'asd'} className={styles.container_wrap__nav_item}>
+              {t('header.nav1')}
+            </Link>
+            <Link to={'asd'} className={styles.container_wrap__nav_item}>
+              {t('header.nav2')}
+            </Link>
+            <Link to={'asd'} className={styles.container_wrap__nav_item}>
+              {t('header.nav3')}
+            </Link>
+            <Link to={'asd'} className={styles.container_wrap__nav_item}>
+              {t('header.nav4')}
+            </Link>
+            <Link to={'asd'} className={styles.container_wrap__nav_item}>
+              {t('header.nav5')}
+            </Link>
           </nav>
           <div className={styles.container_wrap__center}>
             <svg
@@ -65,13 +79,14 @@ const WebHeader = () => {
               <circle opacity="0.2" cx="9" cy="9" r="6" fill="#30DB5B" />
               <circle cx="9" cy="9" r="3" fill="#30DB5B" />
             </svg>
-            We are Online
+            <span className={styles.container_wrap__center_txt}>
+              We are Online
+            </span>
           </div>
           <div className={styles.container_wrap__right}>
-            <div>
-              <LangDecetor />
-            </div>
-            <button>Зв’язатись</button>
+            <LangDetector />
+
+            <CustomButton variant={'header'} icon={btnArrow} size={'md'} />
           </div>
         </div>
       </div>
