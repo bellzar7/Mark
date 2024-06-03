@@ -1,41 +1,90 @@
 .wrap {
   position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.7);
+  top: 12px;
   z-index: 1000;
-  width: 100%;
-  padding: 3px 0;
-  backdrop-filter: blur(5px);
 }
 .wrap_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px;
+  border-radius: 24px;
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(3px);
 }
 .wrap_container_logo {
-  width: 130px;
+  width: 186px;
 }
-.wrap_container_closeBtn {
-  margin: 20px;
-  position: absolute;
-  right: 0;
-}
-.wrap_container_modalWrap {
-  padding: 20px 0 0;
-  margin: 56px 0 46px;
-  border-radius: 0.35rem;
+
+.myLang :global(.dropdown-toggle) {
   display: flex;
-  flex-direction: column;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  border-radius: 14px;
+  background: #1e1e1f;
+  border: none;
 }
-.wrap_container_modalWrap__link {
-  color: #313131;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+.myLang :global(.dropdown-toggle):global(:hover) {
+  background: #151517;
+}
+.myLang :global(.dropdown-toggle):global(:focus) {
+  background: #151517 !important;
+}
+.myLang :global(.dropdown-toggle):global(:active) {
+  background: #151517 !important;
+}
+.myLang :global(.dropdown-toggle):global(::after) {
+  content: none;
+}
+.myLang :global(.btn.show) {
+  background: #151517;
+}
+.myLang :global(.dropdown-menu.show) {
+  background: #151517;
+  min-width: 100%;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item) {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:hover) {
+  background: #444;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:focus) {
+  background: #444;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:active) {
+  background: #444;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item) > img {
+  width: 26px;
+  height: 16px;
+}
+.myLang :global(.dropdown-menu.show) :global(.dropdown-item) > span {
+  color: #FFF;
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 13px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
+}
+.myLang_svg {
+  transition: transform 0.5s ease;
+}
+
+.show {
+  transform: rotate(0deg);
+}
+
+.hide {
+  transform: rotate(90deg);
 }
 
 @media (min-width: 1201px) {
