@@ -162,8 +162,11 @@
     gap: 20px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
   .container {
+    display: none;
+  }
+  .wrap {
     display: none;
   }
 }

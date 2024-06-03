@@ -1,6 +1,7 @@
 .myLang :global(.dropdown-toggle) {
   background: #151517;
   border: none;
+  border-radius: 16px;
   color: white;
   padding: 16px 24px;
   display: flex;
