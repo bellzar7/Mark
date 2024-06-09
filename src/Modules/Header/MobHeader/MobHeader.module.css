@@ -16,57 +16,67 @@
   width: 186px;
 }
 
-.myLang :global(.dropdown-toggle) {
+.myBurger {
+  position: relative;
+  z-index: 2;
+}
+.myBurger_toggle {
   display: flex;
   width: 52px;
   height: 52px;
   justify-content: center;
   align-items: center;
   border-radius: 14px;
-  background: #1e1e1f;
+  background: #252527;
   border: none;
+  --bs-btn-focus-shadow-rgb: none;
 }
-.myLang :global(.dropdown-toggle):global(:hover) {
-  background: #151517;
-}
-.myLang :global(.dropdown-toggle):global(:focus) {
+.myBurger_toggle:hover {
   background: #151517 !important;
 }
-.myLang :global(.dropdown-toggle):global(:active) {
+.myBurger_toggle:focus {
   background: #151517 !important;
 }
-.myLang :global(.dropdown-toggle):global(::after) {
-  content: none;
+.myBurger_toggle:active {
+  background: #151517 !important;
 }
-.myLang :global(.btn.show) {
-  background: #151517;
+.myBurger_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  top: 100%;
+  right: 0;
+  border-radius: 24px;
+  background: rgb(13, 13, 13);
+  padding: 16px;
+  z-index: 2;
 }
-.myLang :global(.dropdown-menu.show) {
-  background: #151517;
-  min-width: 100%;
-}
-.myLang :global(.dropdown-menu.show) :global(.dropdown-item) {
+.myBurger_menu__item {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
   padding-top: 12px;
   padding-bottom: 12px;
+  color: #FFF;
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: normal;
 }
-.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:hover) {
-  background: #444;
+.myBurger_menu__item:hover {
+  color: #03CCC2;
+  cursor: pointer;
 }
-.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:focus) {
-  background: #444;
-}
-.myLang :global(.dropdown-menu.show) :global(.dropdown-item):global(:active) {
-  background: #444;
-}
-.myLang :global(.dropdown-menu.show) :global(.dropdown-item) > img {
+.myBurger_menu__item > img {
   width: 26px;
   height: 16px;
 }
-.myLang :global(.dropdown-menu.show) :global(.dropdown-item) > span {
+.myBurger_menu__item > span {
   color: #FFF;
   text-align: center;
   font-family: "TT Norms Pro", sans-serif;
@@ -75,7 +85,16 @@
   font-weight: 500;
   line-height: normal;
 }
-.myLang_svg {
+.myBurger_menu__back {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: inherit;
+  right: -20px;
+  top: 100%;
+  z-index: 1;
+}
+.myBurger_svg {
   transition: transform 0.5s ease;
 }
 
@@ -85,6 +104,10 @@
 
 .hide {
   transform: rotate(90deg);
+}
+
+.hideMenu {
+  display: none;
 }
 
 @media (min-width: 1201px) {

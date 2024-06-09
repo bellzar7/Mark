@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Dropdown } from 'react-bootstrap'
 import styles from './MobHeader.module.css'
 import { Link } from 'react-scroll'
 import { logo } from '../../../Assets/Images'
@@ -17,13 +16,13 @@ const MobHeader = () => {
       <div className={styles.wrap_container}>
         <img src={logo} alt="logo" className={styles.wrap_container_logo} />
 
-        <Dropdown
-          className={styles.myLang}
-          onToggle={() => {
-            setIconChange(!iconChange)
-          }}
-        >
-          <Dropdown.Toggle id="dropdown-basic">
+        <div className={styles.myBurger}>
+          <button
+            className={styles.myBurger_toggle}
+            onClick={() => {
+              setIconChange(!iconChange)
+            }}
+          >
             {iconChange ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +30,7 @@ const MobHeader = () => {
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                className={`${styles.myLang_svg} ${
+                className={`${styles.myBurger_svg} ${
                   iconChange ? styles.show : ''
                 }`}
               >
@@ -61,7 +60,7 @@ const MobHeader = () => {
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                className={`${styles.myLang_svg} ${
+                className={`${styles.myBurger_svg} ${
                   iconChange ? '' : styles.hide
                 }`}
               >
@@ -79,32 +78,44 @@ const MobHeader = () => {
                 />
               </svg>
             )}
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item>
+          </button>
+          <div
+            className={
+              iconChange ? styles.hideMenu : styles.myBurger_menu__back
+            }
+            onClick={() => {
+              setIconChange(!iconChange)
+            }}
+          ></div>
+          <div className={iconChange ? styles.hideMenu : styles.myBurger_menu}>
+            <div className={styles.myBurger_menu__item}>
               <Link to={'asd'}>{t('header.nav1')}</Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
+            </div>
+            <div className={styles.myBurger_menu__item}>
               <Link to={'asd'}>{t('header.nav2')}</Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
+            </div>
+            <div className={styles.myBurger_menu__item}>
               <Link to={'asd'}>{t('header.nav3')}</Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
+            </div>
+            <div className={styles.myBurger_menu__item}>
               <Link to={'asd'}>{t('header.nav4')}</Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
+            </div>
+            <div className={styles.myBurger_menu__item}>
               <Link to={'asd'}>{t('header.nav5')}</Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
+            </div>
+            <div
+              className={styles.myBurger_menu__item}
+              onClick={() => {
+                setIconChange(false)
+              }}
+            >
               <LangDetector />
-            </Dropdown.Item>
-            <Dropdown.Item>
+            </div>
+            <div className={styles.myBurger_menu__item}>
               <CustomButton variant={'header'} icon={btnArrow} size={'md'} />
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   )

@@ -19,7 +19,8 @@
 .standard:active {
   background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
 }
-.standard_img {
+
+img {
   margin-left: 8px;
 }
 
@@ -43,9 +44,6 @@
 }
 .header:active {
   background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
-}
-.header_img {
-  margin-left: 8px;
 }
 
 .reject {
