@@ -29,7 +29,7 @@
   border-radius: 14px;
   background: #252527;
   border: none;
-  --bs-btn-focus-shadow-rgb: none;
+  outline: none;
 }
 .myBurger_toggle:hover {
   background: #151517 !important;
@@ -43,10 +43,11 @@
 .myBurger_menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   position: absolute;
   box-sizing: border-box;
-  top: 100%;
+  width: auto;
+  top: 150%;
   right: 0;
   border-radius: 24px;
   background: rgb(13, 13, 13);
@@ -56,8 +57,8 @@
 .myBurger_menu__item {
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
   color: #FFF;
@@ -71,6 +72,12 @@
 .myBurger_menu__item:hover {
   color: #03CCC2;
   cursor: pointer;
+}
+.myBurger_menu__item_bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
 }
 .myBurger_menu__item > img {
   width: 26px;
@@ -110,6 +117,84 @@
   display: none;
 }
 
+@media (max-width: 720px) {
+  .wrap_container {
+    padding: 8px;
+    border-radius: 12px;
+  }
+  .wrap_container_logo {
+    width: 104px;
+  }
+  .myBurger_toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+  .myBurger_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    box-sizing: border-box;
+    width: auto;
+    top: 150%;
+    right: 0;
+    border-radius: 24px;
+    background: rgb(13, 13, 13);
+    padding: 16px;
+    z-index: 2;
+  }
+  .myBurger_menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #FFF;
+    text-align: center;
+    font-family: "TT Norms Pro", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+  }
+  .myBurger_menu__item:hover {
+    color: #03CCC2;
+    cursor: pointer;
+  }
+  .myBurger_menu__item_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .myBurger_menu__item > img {
+    width: 26px;
+    height: 16px;
+  }
+  .myBurger_menu__item > span {
+    color: #FFF;
+    text-align: center;
+    font-family: "TT Norms Pro", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .myBurger_menu__back {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    right: -20px;
+    top: 100%;
+    z-index: 1;
+  }
+  .myBurger_svg {
+    transition: transform 0.5s ease;
+  }
+}
 @media (min-width: 1201px) {
   .wrap {
     display: none;

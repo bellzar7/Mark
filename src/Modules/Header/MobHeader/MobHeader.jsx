@@ -103,16 +103,11 @@ const MobHeader = () => {
             <div className={styles.myBurger_menu__item}>
               <Link to={'asd'}>{t('header.nav5')}</Link>
             </div>
-            <div
-              className={styles.myBurger_menu__item}
-              onClick={() => {
-                setIconChange(false)
-              }}
-            >
-              <LangDetector />
-            </div>
             <div className={styles.myBurger_menu__item}>
-              <CustomButton variant={'header'} icon={btnArrow} size={'md'} />
+              <div className={styles.myBurger_menu__item_bottom}>
+                <LangDetector />
+                <CustomButton variant={'header'} icon={btnArrow} size={'md'} />
+              </div>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@
     border-radius: 14px
     background: #252527
     border: none
-    --bs-btn-focus-shadow-rgb: none
+    outline: none
     &:hover
       background: #151517!important
     &:focus
@@ -37,10 +37,11 @@
   &_menu
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: flex-start
     position: absolute
     box-sizing: border-box
-    top: 100%
+    width: auto
+    top: 150%
     right: 0
     border-radius: 24px
     background: rgba(13, 13, 13, 1)
@@ -49,9 +50,8 @@
     &__item
       display: flex
       align-items: center
-      justify-content: center
-      box-sizing: border-box
-      //width: 100%
+      justify-content: flex-start
+      width: 100%
       padding-top: 12px
       padding-bottom: 12px
       color: #FFF
@@ -64,6 +64,11 @@
       &:hover
         color: $accent
         cursor: pointer
+      &_bottom
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        gap: 12px
       & > img
         width: 26px
         height: 16px
@@ -95,78 +100,75 @@
 
 
 
-//@media (max-width: 720px)
-//  .wrap
-//    position: sticky
-//    top: 12px
-//    z-index: 1000
-//    &_container
-//      display: flex
-//      align-items: center
-//      justify-content: space-between
-//      padding: 8px
-//      border-radius: 12px
-//      background: rgba(13, 13, 13, 0.70)
-//      backdrop-filter: blur(3px)
-//      &_logo
-//        width: 104px
-//
-//  .myLang
-//    & :global(.dropdown-toggle)
-//      display: flex
-//      width: 32px
-//      height: 32px
-//      justify-content: center
-//      align-items: center
-//      padding: 8px
-//      border-radius: 14px
-//      background: #252527
-//      border: none
-//      &:global(:hover)
-//        background: #252527!important
-//      &:global(:focus)
-//        background: #252527!important
-//      &:global(:active)
-//        background: #252527!important
-//      &:global(::after)
-//        content: none
-//    & :global(.btn.show)
-//      background: #151517
-//    & :global(.dropdown-menu.show)
-//      border-radius: 24px
-//      background: rgba(13, 13, 13, 0.70)
-//      min-width: 100%
-//      & :global(.dropdown-item)
-//        display: flex
-//        align-items: center
-//        justify-content: space-evenly
-//        width: 100%
-//        padding-top: 12px
-//        padding-bottom: 12px
-//        &:global(:hover)
-//          background: $tertiary
-//        &:global(:focus)
-//          background: $tertiary
-//        &:global(:active)
-//          background: $tertiary
-//        & > img
-//          width: 26px
-//          height: 16px
-//        & > span
-//          color: #FFF
-//          text-align: center
-//          font-family: "TT Norms Pro", sans-serif
-//          font-size: 13px
-//          font-style: normal
-//          font-weight: 500
-//          line-height: normal
-//    &_svg
-//      transition: transform 0.5s ease
-//  .show
-//    transform: rotate(0deg)
-//  .hide
-//    transform: rotate(90deg)
+@media (max-width: 720px)
+  .wrap
+    &_container
+      padding: 8px
+      border-radius: 12px
+      &_logo
+        width: 104px
 
+  .myBurger
+    &_toggle
+      width: 32px
+      height: 32px
+      border-radius: 8px
+    &_menu
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      position: absolute
+      box-sizing: border-box
+      width: auto
+      top: 150%
+      right: 0
+      border-radius: 24px
+      background: rgba(13, 13, 13, 1)
+      padding: 16px
+      z-index: 2
+      &__item
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        padding-top: 12px
+        padding-bottom: 12px
+        color: #FFF
+        text-align: center
+        font-family: "TT Norms Pro", sans-serif
+        font-size: 15px
+        font-style: normal
+        font-weight: 450
+        line-height: normal
+        &:hover
+          color: $accent
+          cursor: pointer
+        &_bottom
+          display: flex
+          flex-direction: column
+          justify-content: flex-start
+          gap: 12px
+        & > img
+          width: 26px
+          height: 16px
+        & > span
+          color: #FFF
+          text-align: center
+          font-family: "TT Norms Pro", sans-serif
+          font-size: 13px
+          font-style: normal
+          font-weight: 500
+          line-height: normal
+      &__back
+        position: absolute
+        width: 100vw
+        height: 100vh
+        background: inherit
+        right: -20px
+        top: 100%
+        z-index: 1
+    &_svg
+      transition: transform 0.5s ease
 
 
 

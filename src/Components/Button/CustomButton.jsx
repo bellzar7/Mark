@@ -31,7 +31,7 @@ const CustomButton = ({ variant, icon, size }) => {
         : variant === 'reject'
         ? `${t('header.btn_reject')}`
         : ''}
-      {icon && <img src={icon} alt={icon} className={styles.img} />}
+      {icon && <img src={icon} alt={icon} />}
     </button>
   )
 }

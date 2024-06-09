@@ -20,10 +20,6 @@
   background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
 }
 
-img {
-  margin-left: 8px;
-}
-
 .header {
   padding: 12px 48px;
   flex-shrink: 0;
@@ -38,6 +34,8 @@ img {
   font-style: normal;
   font-weight: 600;
   line-height: 17px;
+  width: 203px;
+  gap: 8px;
 }
 .header:hover {
   background: linear-gradient(90deg, #00E0FF 0%, #0A2CE1 100%);
