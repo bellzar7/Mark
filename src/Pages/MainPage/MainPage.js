@@ -1,9 +1,11 @@
 import React from 'react'
-import { Header } from '../../Modules'
+import { Header, PopUp } from '../../Modules'
 
 const MainPage = () => {
+  console.log('asd')
   return (
     <>
+      <PopUp />
       <Header />
       <h1>asdasdasdasdasd</h1>
       <br />

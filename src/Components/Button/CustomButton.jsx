@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './CustomButton.module.css'
 import { useTranslation } from 'react-i18next'
 
-const CustomButton = ({ variant, icon, size, className }) => {
+const CustomButton = ({ variant, icon, size, className, onClick }) => {
   const [t] = useTranslation()
 
   return (
@@ -26,6 +26,7 @@ const CustomButton = ({ variant, icon, size, className }) => {
           ? { height: '52px' }
           : null
       }
+      onClick={onClick}
     >
       {variant === 'standard' || 'header'
         ? `${t('header.btn_standard')}`

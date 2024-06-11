@@ -5,9 +5,12 @@ import { logo } from '../../../Assets/Images'
 import { CustomButton, LangDetector } from '../../../Components'
 import { useTranslation } from 'react-i18next'
 import { btnArrow } from '../../../Assets/Icons'
+import { popUpStore } from '../../PopUp/popUpStore'
 
 const WebHeader = () => {
   const [t] = useTranslation()
+
+  const handleShow = popUpStore((state) => state.handleShow)
 
   return (
     <header className={styles.wrap}>
@@ -56,6 +59,7 @@ const WebHeader = () => {
               icon={btnArrow}
               size={'md'}
               className={styles.container_wrap__right_btn}
+              onClick={handleShow}
             />
           </div>
         </div>
