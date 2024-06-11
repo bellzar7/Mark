@@ -2,20 +2,21 @@ import React from 'react'
 import styles from './CustomButton.module.css'
 import { useTranslation } from 'react-i18next'
 
-const CustomButton = ({ variant, icon, size }) => {
+const CustomButton = ({ variant, icon, size, className }) => {
   const [t] = useTranslation()
 
   return (
     <button
-      className={
-        variant === 'standard'
-          ? `${styles.standard}`
-          : variant === 'reject'
-          ? `${styles.reject}`
-          : variant === 'header'
-          ? `${styles.header}`
-          : ''
-      }
+      className={`${className}
+        ${
+          variant === 'standard'
+            ? `${styles.standard}`
+            : variant === 'reject'
+            ? `${styles.reject}`
+            : variant === 'header'
+            ? `${styles.header}`
+            : ''
+        }`}
       style={
         size === 'sm'
           ? { height: '44px' }

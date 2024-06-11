@@ -78,6 +78,9 @@
       display: flex
       align-items: center
       gap: 20px
+      &_btn
+        width: 203px
+        padding: 12px 48px
 
 
 @keyframes slideIn
@@ -112,32 +115,8 @@
           &:hover
             color: $accent
             font-weight: 500
-          &:nth-of-type(4)
-            &::after
-              content: '+1'
-              position: absolute
-              right: 0
-              top: -12px
-              display: flex
-              padding: 2px 5px
-              justify-content: center
-              align-items: center
-              border-radius: 9999px
-              border: 1px solid $accent
-              background: #292A2D
-              color: $accent
-              text-align: center
-              font-family: 'Inter', sans-serif
-              font-size: 10px
-              font-style: normal
-              font-weight: 500
-              line-height: 10px
       &__center
         display: none
-      &__right
-        display: flex
-        align-items: center
-        gap: 20px
 
   
 @media (max-width: 1200px)

@@ -51,7 +51,12 @@ const WebHeader = () => {
           <div className={styles.container_wrap__right}>
             <LangDetector />
 
-            <CustomButton variant={'header'} icon={btnArrow} size={'md'} />
+            <CustomButton
+              variant={'header'}
+              icon={btnArrow}
+              size={'md'}
+              className={styles.container_wrap__right_btn}
+            />
           </div>
         </div>
       </div>

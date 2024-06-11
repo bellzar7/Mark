@@ -106,7 +106,12 @@ const MobHeader = () => {
             <div className={styles.myBurger_menu__item}>
               <div className={styles.myBurger_menu__item_bottom}>
                 <LangDetector />
-                <CustomButton variant={'header'} icon={btnArrow} size={'md'} />
+                <CustomButton
+                  variant={'header'}
+                  icon={btnArrow}
+                  size={'md'}
+                  className={styles.myBurger_menu__item_bottom__btn}
+                />
               </div>
             </div>
           </div>

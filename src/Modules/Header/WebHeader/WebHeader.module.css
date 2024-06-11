@@ -89,6 +89,10 @@
   align-items: center;
   gap: 20px;
 }
+.container_wrap__right_btn {
+  width: 203px;
+  padding: 12px 48px;
+}
 
 @keyframes slideIn {
   0% {
@@ -133,33 +137,8 @@
     color: #03CCC2;
     font-weight: 500;
   }
-  .container_wrap__nav_item:nth-of-type(4)::after {
-    content: "+1";
-    position: absolute;
-    right: 0;
-    top: -12px;
-    display: flex;
-    padding: 2px 5px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 9999px;
-    border: 1px solid #03CCC2;
-    background: #292A2D;
-    color: #03CCC2;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 10px;
-  }
   .container_wrap__center {
     display: none;
-  }
-  .container_wrap__right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
   }
 }
 @media (max-width: 1200px) {

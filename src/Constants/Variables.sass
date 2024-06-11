@@ -22,18 +22,41 @@ $surface-bright: #F2F2F2
 $surface-dim: #050505
 
 // Оголошення міксину
-@mixin title
-  color: $title
-  font-family: Montserrat, sans-serif
-  font-size: 34px
+@mixin btnStandard
+  flex-shrink: 0
+  border-radius: 14px
+  background: #19191C
+  border: none
+  box-sizing: border-box
+  color: #FFF
+  font-feature-settings: 'clig' off, 'liga' off
+  font-family: 'Gilroy', sans-serif
+  font-size: 15px
   font-style: normal
   font-weight: 600
-  line-height: normal
-  @media (max-width: 1440px)
-    line-height: 41px
-  @media (max-width: 720px)
-    font-size: 34px
-    line-height: 41px
-    text-align: center
+  line-height: 17px
+  &:hover
+    background: linear-gradient(90deg, #00E0FF 0%, #0A2CE1 100%)
+  &:active
+    background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%)
 
-  
+@mixin btnReject
+  height: 44px
+  flex-shrink: 0
+  border-radius: 14px
+  border: 1px solid #D0D5DD
+  background: #FFF
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+  color: #19191C
+  font-feature-settings: 'clig' off, 'liga' off
+  font-family: 'Gilroy', sans-serif
+  font-size: 15px
+  font-style: normal
+  font-weight: 600
+  line-height: 17px
+  &:hover
+    border: 1px solid #B7BCC5
+    background: #F4F6F8
+  &:active
+    border: 1px solid #B7BCC5
+    background: #e8e8e8

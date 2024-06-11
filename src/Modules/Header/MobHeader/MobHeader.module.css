@@ -79,6 +79,10 @@
   justify-content: flex-start;
   gap: 12px;
 }
+.myBurger_menu__item_bottom__btn {
+  width: 203px;
+  padding: 12px 48px;
+}
 .myBurger_menu__item > img {
   width: 26px;
   height: 16px;
@@ -159,6 +163,29 @@
     font-weight: 450;
     line-height: normal;
   }
+  .myBurger_menu__item:nth-of-type(4) > a {
+    position: relative;
+  }
+  .myBurger_menu__item:nth-of-type(4) > a::after {
+    content: "+1";
+    position: absolute;
+    right: -13px;
+    top: -12px;
+    display: flex;
+    padding: 2px 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid #03CCC2;
+    background: #292A2D;
+    color: #03CCC2;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 10px;
+  }
   .myBurger_menu__item:hover {
     color: #03CCC2;
     cursor: pointer;
@@ -168,6 +195,10 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 12px;
+  }
+  .myBurger_menu__item_bottom__btn {
+    width: 155px;
+    padding: 12px 24px;
   }
   .myBurger_menu__item > img {
     width: 26px;
