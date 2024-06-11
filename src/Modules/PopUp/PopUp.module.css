@@ -1,0 +1,10 @@
+.myModal {
+  min-width: 650px;
+}
+.myModal > :nth-child(1) {
+  width: 100%;
+  padding: 32px !important;
+  gap: 32px;
+}
+
+/*# sourceMappingURL=PopUp.module.css.map */
