@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.2",
     "framer-motion": "^11.2.10",
+    "google-libphonenumber": "^3.2.34",
     "i18next": "^23.11.5",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.5.2",
@@ -18,9 +19,11 @@
     "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.51.5",
     "react-i18next": "^14.1.2",
+    "react-international-phone": "^4.3.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
+    "react-toastify": "^10.0.5",
     "web-vitals": "^2.1.4",
     "zustand": "^4.5.2"
   },
@@ -49,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@hookform/devtools": "^4.3.1",
     "prettier": "^3.0.3"
   }
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import { Header, PopUp } from '../../Modules'
 
 const MainPage = () => {
-  console.log('asd')
   return (
     <>
       <PopUp />

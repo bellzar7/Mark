@@ -7,5 +7,9 @@
     "nav5": "Contacts",
     "btn_standard": "Get in touch",
     "btn_reject": "Reject"
+  },
+  "popUp": {
+    "btn_send": "Send",
+    "btn_back": "Come back"
   }
 }

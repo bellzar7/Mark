@@ -15,6 +15,10 @@ const CustomButton = ({ variant, icon, size, className, onClick }) => {
             ? `${styles.reject}`
             : variant === 'header'
             ? `${styles.header}`
+            : variant === 'send'
+            ? `${styles.standard}`
+            : variant === 'back'
+            ? `${styles.reject}`
             : ''
         }`}
       style={
@@ -28,10 +32,16 @@ const CustomButton = ({ variant, icon, size, className, onClick }) => {
       }
       onClick={onClick}
     >
-      {variant === 'standard' || 'header'
+      {variant === 'standard'
+        ? `${t('header.btn_standard')}`
+        : variant === 'header'
         ? `${t('header.btn_standard')}`
         : variant === 'reject'
         ? `${t('header.btn_reject')}`
+        : variant === 'send'
+        ? `${t('popUp.btn_send')}`
+        : variant === 'back'
+        ? `${t('popUp.btn_back')}`
         : ''}
       {icon && <img src={icon} alt={icon} />}
     </button>
