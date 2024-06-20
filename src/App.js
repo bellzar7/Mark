@@ -10,10 +10,10 @@ function App() {
       <BrowserRouter>
         <AppRouter />
       </BrowserRouter>
-      <ReCAPTCHA
-        sitekey="6LceyBUpAAAAAJhzgCCekeruQ63xiMwp_9L5pfbo"
-        size="invisible"
-      />
+      {/*<ReCAPTCHA*/}
+      {/*  sitekey="6LceyBUpAAAAAJhzgCCekeruQ63xiMwp_9L5pfbo"*/}
+      {/*  size="invisible"*/}
+      {/*/>*/}
     </div>
   )
 }

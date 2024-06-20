@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { EN, UA } from '../../Assets/Images'
-import './LangDetector.module.css'
-import { Dropdown } from 'react-bootstrap'
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from '@nextui-org/react'
 import styles from './LangDetector.module.css'
 
 const LangDetector = () => {
@@ -29,29 +33,33 @@ const LangDetector = () => {
 
   return (
     <Dropdown className={styles.myLang}>
-      <Dropdown.Toggle id="dropdown-basic">
-        <img src={langImage} alt={langImage} />
-        <span>{langName}</span>
-      </Dropdown.Toggle>
+      <DropdownTrigger id="dropdown-basic">
+        <button className={styles.myLang_btn}>
+          <img src={langImage} alt={langImage} />
+          <span>{langName}</span>
+        </button>
+      </DropdownTrigger>
 
-      <Dropdown.Menu>
-        <Dropdown.Item
-          onClick={() => {
+      <DropdownMenu>
+        <DropdownItem
+          onPress={() => {
             changeLanguage('ua')
           }}
+          textValue={'ua'}
         >
           <img src={UA} alt={UA} />
           <span>Укр</span>
-        </Dropdown.Item>
-        <Dropdown.Item
-          onClick={() => {
+        </DropdownItem>
+        <DropdownItem
+          onPress={() => {
             changeLanguage('en')
           }}
+          textValue={'en'}
         >
           <img src={EN} alt={EN} />
           <span>Eng</span>
-        </Dropdown.Item>
-      </Dropdown.Menu>
+        </DropdownItem>
+      </DropdownMenu>
     </Dropdown>
   )
 }

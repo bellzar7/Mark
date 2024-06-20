@@ -5,14 +5,13 @@ import { logo } from '../../../Assets/Images'
 import { useTranslation } from 'react-i18next'
 import { CustomButton, LangDetector } from '../../../Components'
 import { btnArrow } from '../../../Assets/Icons'
-import { popUpStore } from '../../PopUp/popUpStore'
 
-const MobHeader = () => {
+const MobHeader = ({ modalState }) => {
   const [iconChange, setIconChange] = useState(true)
 
   const [t] = useTranslation()
 
-  const handleShow = popUpStore((state) => state.handleShow)
+  let { onOpen } = modalState
 
   return (
     <header className={`customContainer ${styles.wrap}`}>
@@ -114,7 +113,7 @@ const MobHeader = () => {
                   icon={btnArrow}
                   size={'md'}
                   className={styles.myBurger_menu__item_bottom__btn}
-                  onClick={handleShow}
+                  onClick={onOpen}
                 />
               </div>
             </div>

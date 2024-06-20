@@ -1,11 +1,14 @@
 import React from 'react'
 import { Header, PopUp } from '../../Modules'
+import { useDisclosure } from '@nextui-org/react'
 
 const MainPage = () => {
+  const modalState = useDisclosure()
+
   return (
     <>
-      <PopUp />
-      <Header />
+      <PopUp modalState={modalState} />
+      <Header modalState={modalState} />
       <h1>asdasdasdasdasd</h1>
       <br />
       <br />

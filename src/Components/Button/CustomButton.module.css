@@ -1,4 +1,6 @@
 .standard {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   border-radius: 14px;
   background: #19191C;
@@ -20,6 +22,8 @@
 }
 
 .header {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   border-radius: 14px;
   background: #19191C;
@@ -41,6 +45,8 @@
 }
 
 .reject {
+  display: flex;
+  align-items: center;
   height: 44px;
   flex-shrink: 0;
   border-radius: 14px;
