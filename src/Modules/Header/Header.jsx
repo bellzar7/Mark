@@ -2,11 +2,11 @@ import React from 'react'
 import WebHeader from './WebHeader/WebHeader'
 import MobHeader from './MobHeader/MobHeader'
 
-const Header = () => {
+const Header = ({ modalState }) => {
   return (
     <>
-      <WebHeader />
-      <MobHeader />
+      <WebHeader modalState={modalState} />
+      <MobHeader modalState={modalState} />
     </>
   )
 }

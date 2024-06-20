@@ -10,6 +10,40 @@
   },
   "popUp": {
     "btn_send": "Send",
-    "btn_back": "Come back"
+    "btn_back": "Go back",
+    "form": {
+      "title": "Feedback",
+      "subtitle": "Leave your contact information and our manager will contact you",
+      "inputName": {
+        "lbl": "Name",
+        "placeholder": "Enter your name"
+      },
+      "inputPhone": {
+        "lbl": "Phone number"
+      },
+      "inputEmail": {
+        "lbl": {
+          "first": "E-mail",
+          "second": "(optional)"
+        },
+        "placeholder": "Enter your e-mail"
+      },
+      "inputCheckbox": {
+        "lbl": "I consent to the processing of my personal data for contact purposes"
+      }
+    }
+  },
+  "toastify": {
+    "pending": {
+      "title": "Sending request",
+      "subTitle": "The request is being sent..."
+    },
+    "success": {
+      "title": "Request sent!",
+      "subTitle": "Your request has been successfully sent, our manager will contact you soon"
+    },
+    "warning": {
+      "title": "Oops something went wrong. Please refresh the page and try again"
+    }
   }
 }

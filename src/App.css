@@ -1,5 +1,6 @@
 @import "Assets/Fonts/TTNorms/stylesheet.css";
 
+
 .customContainer {
   width: 1720px;
   margin: 0 auto;
@@ -34,3 +35,6 @@ body {
   position: relative;
   background: #000!important;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
