@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styles from './WebHeader.module.css'
 import { Link } from 'react-scroll'
 import { logo } from '../../../Assets/Images'
@@ -6,9 +6,8 @@ import { CustomButton, LangDetector } from '../../../Components'
 import { useTranslation } from 'react-i18next'
 import { btnArrow } from '../../../Assets/Icons'
 
-const WebHeader = ({ modalState }) => {
+const WebHeader = memo(({ modalState }) => {
   const [t] = useTranslation()
-
   const { onOpen } = modalState
 
   return (
@@ -65,6 +64,6 @@ const WebHeader = ({ modalState }) => {
       </div>
     </header>
   )
-}
+})
 
 export default WebHeader

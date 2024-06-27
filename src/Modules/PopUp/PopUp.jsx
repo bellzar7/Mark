@@ -5,7 +5,7 @@ import { PhoneNumberUtil } from 'google-libphonenumber'
 import { closeBtn, iconMail, iconName } from '../../Assets/Icons'
 import { PhoneInput } from 'react-international-phone'
 import { CustomButton, Toastify } from '../../Components'
-import { useEffect, useRef, useState } from 'react'
+import { memo, useEffect, useRef, useState } from 'react'
 import { random } from 'lodash'
 import { sendInTg } from '../../Constants/functions'
 import { toast, ToastContainer } from 'react-toastify'
@@ -20,16 +20,14 @@ const videos = [
   'https://www.youtube.com/watch?v=GevtQPBjBOw',
 ]
 
-function PopUp({ modalState }) {
+const PopUp = memo(({ modalState }) => {
   const [t] = useTranslation()
-  const { isOpen, onOpen, onClose, onOpenChange } = modalState
-
+  const { isOpen, onClose, onOpenChange } = modalState
   const {
     register,
     handleSubmit,
     reset,
-    control,
-    formState: { isSubmitSuccessful, errors, touchedFields, isSubmitting },
+    formState: { isSubmitSuccessful, errors, touchedFields },
   } = useForm({ mode: 'all' })
 
   const [phone, setPhone] = useState('')
@@ -58,6 +56,7 @@ function PopUp({ modalState }) {
       reset()
       setPhone('')
       setIsBlurredPhone(false)
+      onClose()
     }
   }, [isSubmitSuccessful])
 
@@ -106,6 +105,7 @@ function PopUp({ modalState }) {
         onOpenChange={onOpenChange}
         className={styles.myModal}
         hideCloseButton={true}
+        placement={'center'}
       >
         <ModalContent>
           {(onClose) => (
@@ -278,6 +278,6 @@ function PopUp({ modalState }) {
       </Modal>
     </>
   )
-}
+})
 
 export { PopUp }

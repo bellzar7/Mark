@@ -16,9 +16,42 @@
       width: 186px
 
 .myBurger
-  position: relative
-  z-index: 2
-  &_toggle
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  box-sizing: border-box
+  width: auto
+  border-radius: 24px
+  background: rgba(13, 13, 13, 1)
+  padding: 16px
+  & > div
+    padding: 0
+    & > ul > :nth-child(1)
+      margin-bottom: 24px
+      & > ul > li
+        padding-top: 12px
+        padding-bottom: 12px
+        color: #FFF
+        text-align: center
+        font-family: "TT Norms", sans-serif
+        font-size: 15px
+        font-style: normal
+        font-weight: 450
+        line-height: normal
+        background: rgba(13, 13, 13, 1)
+        &:hover
+          color: $accent
+          cursor: pointer
+          background: #252527
+    & > ul > :nth-child(2) > ul > :nth-child(1)
+      padding: 0
+      margin-bottom: 12px
+    & > ul > :nth-child(2) > ul > li
+      background: rgba(13, 13, 13, 1)
+    & > ul > :nth-child(2) > ul > li > span
+      display: flex
+      justify-content: center
+  &_toggleBtn
     display: flex
     width: 52px
     height: 52px
@@ -34,73 +67,17 @@
       background: #151517!important
     &:active
       background: #151517!important
-  &_menu
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    position: absolute
-    box-sizing: border-box
-    width: auto
-    top: 150%
-    right: 0
-    border-radius: 24px
-    background: rgba(13, 13, 13, 1)
-    padding: 16px
-    z-index: 2
-    &__item
-      display: flex
-      align-items: center
-      justify-content: flex-start
-      width: 100%
-      padding-top: 12px
-      padding-bottom: 12px
-      color: #FFF
-      text-align: center
-      font-family: "TT Norms Pro", sans-serif
-      font-size: 15px
-      font-style: normal
-      font-weight: 450
-      line-height: normal
-      &:hover
-        color: $accent
-        cursor: pointer
-      &_bottom
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        gap: 12px
-        &__btn
-          width: 203px
-          padding: 12px 48px
-      & > img
-        width: 26px
-        height: 16px
-      & > span
-        color: #FFF
-        text-align: center
-        font-family: "TT Norms Pro", sans-serif
-        font-size: 13px
-        font-style: normal
-        font-weight: 500
-        line-height: normal
-    &__back
-      position: absolute
-      width: 100vw
-      height: 100vh
-      background: inherit
-      right: -20px
-      top: 100%
-      z-index: 1
+  &_custBtn
+    width: 203px
+    padding: 12px 48px
+
+
   &_svg
     transition: transform 0.5s ease
 .show
   transform: rotate(0deg)
 .hide
   transform: rotate(90deg)
-
-.hideMenu
-  display: none
-
 
 
 @media (max-width: 720px)
@@ -111,94 +88,16 @@
       &_logo
         width: 104px
 
+
+
   .myBurger
-    &_toggle
+    &_toggleBtn
       width: 32px
       height: 32px
       border-radius: 8px
-    &_menu
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-      position: absolute
-      box-sizing: border-box
+    &_custBtn
       width: auto
-      top: 150%
-      right: 0
-      border-radius: 24px
-      background: rgba(13, 13, 13, 1)
-      padding: 16px
-      z-index: 2
-      &__item
-        display: flex
-        align-items: center
-        justify-content: flex-start
-        width: 100%
-        padding-top: 12px
-        padding-bottom: 12px
-        color: #FFF
-        text-align: center
-        font-family: "TT Norms Pro", sans-serif
-        font-size: 15px
-        font-style: normal
-        font-weight: 450
-        line-height: normal
-        &:nth-of-type(4)
-          & > a
-            position: relative
-            &::after
-              content: '+1'
-              position: absolute
-              right: -13px
-              top: -12px
-              display: flex
-              padding: 2px 5px
-              justify-content: center
-              align-items: center
-              border-radius: 9999px
-              border: 1px solid $accent
-              background: #292A2D
-              color: $accent
-              text-align: center
-              font-family: 'Inter', sans-serif
-              font-size: 10px
-              font-style: normal
-              font-weight: 500
-              line-height: 10px
-        &:hover
-          color: $accent
-          cursor: pointer
-        &_bottom
-          display: flex
-          flex-direction: column
-          justify-content: flex-start
-          gap: 12px
-          &__btn
-            width: 155px
-            padding: 12px 24px
-        & > img
-          width: 26px
-          height: 16px
-        & > span
-          color: #FFF
-          text-align: center
-          font-family: "TT Norms Pro", sans-serif
-          font-size: 13px
-          font-style: normal
-          font-weight: 500
-          line-height: normal
-      &__back
-        position: absolute
-        width: 100vw
-        height: 100vh
-        background: inherit
-        right: -20px
-        top: 100%
-        z-index: 1
-    &_svg
-      transition: transform 0.5s ease
-
-
+      padding: 6px 24px
 
 
 @media (min-width: 1201px)

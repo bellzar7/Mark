@@ -1,4 +1,7 @@
 @import "Assets/Fonts/TTNorms/stylesheet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 .customContainer {
@@ -35,6 +38,3 @@ body {
   position: relative;
   background: #000!important;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
