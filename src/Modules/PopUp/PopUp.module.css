@@ -24,7 +24,7 @@
 }
 .form_top__first_title {
   color: #19191C;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -42,7 +42,7 @@
 }
 .form_top__second {
   color: #7E818B;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 450;
@@ -59,7 +59,7 @@
 }
 .form_bottom__box_lbl {
   color: #000;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
@@ -68,7 +68,7 @@
 }
 .form_bottom__box_lbl span {
   color: #515C6D;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 450;
@@ -98,7 +98,7 @@
 }
 .form_bottom__box_wrap__inp::placeholder {
   color: #AAADB9;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -117,7 +117,7 @@
   width: 100%;
   border: none !important;
   color: #000 !important;
-  font-family: "TT Norms Pro", sans-serif !important;
+  font-family: "TT Norms", sans-serif !important;
   font-size: 14px !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -151,6 +151,55 @@
 }
 .form_btns__btn {
   padding: 12px 48px;
+}
+
+@media (max-width: 720px) {
+  .myModal {
+    min-width: 300px;
+    max-width: 90%;
+    padding: 20px;
+    width: 90%;
+    border-radius: 16px;
+  }
+  .form {
+    gap: 20px;
+  }
+  .form_top {
+    gap: 4px;
+  }
+  .form_top__first_title {
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .form_top__first_img {
+    width: 19.2px;
+    height: 19.2px;
+  }
+  .form_top__second {
+    font-size: 15px;
+    line-height: 130%;
+  }
+  .form_bottom {
+    gap: 18px;
+  }
+  .form_bottom__box_wrap {
+    gap: 2px;
+  }
+  .form_bottom__box_checkBoxWrap__lbl {
+    font-size: 12px;
+    line-height: 130%;
+  }
+  .form_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+  }
+  .form_btns__btn {
+    padding: 12px 48px;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=PopUp.module.css.map */

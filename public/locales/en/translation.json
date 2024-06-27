@@ -45,5 +45,10 @@
     "warning": {
       "title": "Oops something went wrong. Please refresh the page and try again"
     }
+  },
+  "studio": {
+    "btn": "Contact Us",
+    "title": "Web Development and Design Studio",
+    "subTitle": "Designing and developing websites for your business involves creating the visual appearance and functionality of your company. This is a crucial component for any business in the digital age, as your website is the business card of your company."
   }
 }
