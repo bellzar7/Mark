@@ -33,15 +33,17 @@ const Logos = () => {
         gradientWidth={'150px'}
         gradientColor={'rgba(5, 5, 5, 0.85) 0%'}
       >
-        <Logo logoN={tredN} logoH={tredH} />
-        <Logo logoN={concreteN} logoH={concreteH} />
-        <Logo logoN={ninaN} logoH={ninaH} />
-        <Logo logoN={smileN} logoH={smileH} />
-        <Logo logoN={optykaN} logoH={optykaH} />
-        <Logo logoN={udN} logoH={udH} />
-        <Logo logoN={eliteN} logoH={eliteH} />
-        <Logo logoN={delfN} logoH={delfH} />
-        <Logo logoN={nembusN} logoH={nembusH} />
+        <div className={style.marquee_box}>
+          <Logo logoN={tredN} logoH={tredH} />
+          <Logo logoN={concreteN} logoH={concreteH} />
+          <Logo logoN={ninaN} logoH={ninaH} />
+          <Logo logoN={smileN} logoH={smileH} />
+          <Logo logoN={optykaN} logoH={optykaH} />
+          <Logo logoN={udN} logoH={udH} />
+          <Logo logoN={eliteN} logoH={eliteH} />
+          <Logo logoN={delfN} logoH={delfH} />
+          <Logo logoN={nembusN} logoH={nembusH} />
+        </div>
       </Marquee>
     </div>
   )
