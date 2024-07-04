@@ -1,0 +1,112 @@
+.advantages_block {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.advantages_heading {
+  color: var(--Primary-on-primary, #F2F2F2);
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+
+.advantages_cards_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.advantages_card {
+  display: flex;
+  height: 280px;
+  width: 552px;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-radius: 30px;
+  border: 1px solid #121212;
+  background: #050505;
+}
+
+.advantages_card_icon {
+  width: 60px;
+  height: 60px;
+}
+
+.advantages_card_heading {
+  color: #FFF;
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+
+.advantages_card_text {
+  color: #686A71;
+  text-align: center;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 130%;
+  margin: 0;
+}
+
+@media (max-width: 1820px) {
+  .advantages_card {
+    display: flex;
+    height: 280px;
+    width: 356px;
+  }
+}
+@media (max-width: 1200px) {
+  .advantages_cards_block {
+    gap: 20px;
+  }
+  .advantages_card {
+    height: 280px;
+    width: 350px;
+  }
+}
+@media (max-width: 720px) {
+  .advantages_card {
+    height: auto;
+    width: 100%;
+  }
+  .advantages_cards_block {
+    gap: 16px;
+  }
+  .advantages_heading {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 30px;
+  }
+  .advantages_block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .advantages_card_heading {
+    font-size: 24px;
+  }
+  .advantages_card_text {
+    font-size: 15px;
+  }
+  .advantages_card {
+    border-radius: 18px;
+    border: 1px solid #0D571F;
+    background: #050505;
+  }
+}
+
+/*# sourceMappingURL=advantages.module.css.map */
