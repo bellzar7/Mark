@@ -1,3 +1,6 @@
 export * from './Header'
 export * from './PopUp'
 export * from './Studio'
+export * from './Advantages'
+export * from './Steps'
+export * from './Logos'

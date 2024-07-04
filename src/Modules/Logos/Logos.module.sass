@@ -1,0 +1,56 @@
+.wrap
+  padding-top: 60px
+  padding-bottom: 60px
+  box-sizing: border-box
+  border-radius: 30px
+  border: 1px solid #121212
+  background: #050505
+
+.marquee
+  gap: 70px
+  & > :nth-child(2)
+    & > :nth-child(1)
+      justify-content: space-between
+      width: 100%
+  & > :nth-child(3)
+    justify-content: space-between
+    width: 100%
+    min-width: 100%
+
+
+.logo
+  width: auto
+  height: 60px
+
+@media (max-width: 1820px)
+  .wrap
+    padding-top: 40px
+    padding-bottom: 40px
+    border-radius: 24px
+
+  .marquee
+    gap: 45px
+
+
+@media (max-width: 1200px)
+  .wrap
+    padding-top: 40px
+    padding-bottom: 40px
+    border-radius: 24px
+
+  .marquee
+    gap: 30px
+    width: 100%
+    & > :nth-child(2)
+      & > :nth-child(1)
+        justify-content: space-between
+        width: auto
+        gap: 30px
+        min-width: auto
+    & > :nth-child(3)
+      display: flex
+      justify-content: space-between
+      width: auto
+      min-width: auto
+      gap: 30px
+      box-sizing: border-box
