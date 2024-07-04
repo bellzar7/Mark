@@ -7,17 +7,20 @@
   background: #050505;
 }
 
-.marquee {
-  gap: 70px;
-}
 .marquee > :nth-child(2) > :nth-child(1) {
-  justify-content: space-between;
   width: 100%;
 }
-.marquee > :nth-child(3) {
-  justify-content: space-between;
+.marquee > :nth-child(2) > :nth-child(1) > :nth-child(1) {
   width: 100%;
-  min-width: 100%;
+}
+.marquee > :nth-child(3) > :nth-child(1) {
+  width: 100%;
+}
+.marquee_box {
+  display: flex;
+  width: 100%;
+  gap: 75px;
+  padding: 0 35px;
 }
 
 .logo {
@@ -31,33 +34,12 @@
     padding-bottom: 40px;
     border-radius: 24px;
   }
-  .marquee {
-    gap: 45px;
-  }
 }
 @media (max-width: 1200px) {
   .wrap {
     padding-top: 40px;
     padding-bottom: 40px;
     border-radius: 24px;
-  }
-  .marquee {
-    gap: 30px;
-    width: 100%;
-  }
-  .marquee > :nth-child(2) > :nth-child(1) {
-    justify-content: space-between;
-    width: auto;
-    gap: 30px;
-    min-width: auto;
-  }
-  .marquee > :nth-child(3) {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    min-width: auto;
-    gap: 30px;
-    box-sizing: border-box;
   }
 }
 
