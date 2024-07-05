@@ -1,11 +1,8 @@
 import React, { memo } from 'react'
 import styles from './CustomButton.module.css'
-import { useTranslation } from 'react-i18next'
 
 const CustomButton = memo(
   ({ variant, icon, size, className, onClick, type, text }) => {
-    const [t] = useTranslation()
-
     return (
       <button
         type={type}

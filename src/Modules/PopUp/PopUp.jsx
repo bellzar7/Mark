@@ -58,6 +58,7 @@ const PopUp = memo(({ modalState }) => {
       setIsBlurredPhone(false)
       onClose()
     }
+    // eslint-disable-next-line
   }, [isSubmitSuccessful])
 
   const onSubmit = async ({ name, email }) => {
