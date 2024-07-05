@@ -6,7 +6,7 @@
 .advantages_heading {
   color: var(--Primary-on-primary, #F2F2F2);
   text-align: center;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -44,7 +44,7 @@
 .advantages_card_heading {
   color: #FFF;
   text-align: center;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 600;
@@ -55,7 +55,7 @@
 .advantages_card_text {
   color: #686A71;
   text-align: center;
-  font-family: "TT Norms Pro", sans-serif;
+  font-family: "TT Norms", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 450;

@@ -58,6 +58,7 @@ const PopUp = memo(({ modalState }) => {
       setIsBlurredPhone(false)
       onClose()
     }
+    // eslint-disable-next-line
   }, [isSubmitSuccessful])
 
   const onSubmit = async ({ name, email }) => {
@@ -258,17 +259,19 @@ const PopUp = memo(({ modalState }) => {
 
                 <div className={styles.form_btns}>
                   <CustomButton
-                    variant={'send'}
+                    variant={'standard'}
                     size={'sm'}
                     className={styles.form_btns__btn}
                     type={'submit'}
+                    text={`${t('popUp.btn_send')}`}
                   />
                   <CustomButton
-                    variant={'back'}
+                    variant={'reject'}
                     size={'sm'}
                     className={styles.form_btns__btn}
                     onClick={onClose}
                     type={'button'}
+                    text={`${t('popUp.btn_back')}`}
                   />
                 </div>
               </form>

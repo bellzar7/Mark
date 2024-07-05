@@ -58,6 +58,7 @@ const WebHeader = memo(({ modalState }) => {
               size={'md'}
               className={styles.container_wrap__right_btn}
               onClick={onOpen}
+              text={`${t('header.btn_standard')}`}
             />
           </div>
         </div>

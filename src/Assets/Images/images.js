@@ -3,5 +3,19 @@ import UA from './ua.webp'
 import EN from './eng.webp'
 import studioBG from './studioBG.webp'
 import studioIcon from './studioIcon.webp'
+import serviceFrst from './serviceFrst.webp'
+import serviceScnd from './serviceScnd.webp'
+import serviceThrd from './serviceThrd.webp'
+import serviceDone from './serviceDone.webp'
 
-export { logo, EN, UA, studioBG, studioIcon }
+export {
+  logo,
+  EN,
+  UA,
+  studioBG,
+  studioIcon,
+  serviceFrst,
+  serviceScnd,
+  serviceThrd,
+  serviceDone,
+}

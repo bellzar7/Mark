@@ -133,6 +133,7 @@ const MobHeader = memo(({ modalState }) => {
                   size={'md'}
                   className={styles.myBurger_custBtn}
                   onClick={onOpen}
+                  text={`${t('header.btn_standard')}`}
                 />
               </DropdownItem>
             </DropdownSection>

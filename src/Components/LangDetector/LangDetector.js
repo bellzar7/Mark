@@ -10,7 +10,8 @@ import {
 import styles from './LangDetector.module.css'
 
 const LangDetector = () => {
-  const [i18n] = useTranslation()
+  // eslint-disable-next-line
+  const [_, i18n] = useTranslation()
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang)
