@@ -50,5 +50,39 @@
     "btn": "Contact Us",
     "title": "Web Development and Design Studio",
     "subTitle": "Designing and developing websites for your business involves creating the visual appearance and functionality of your company. This is a crucial component for any business in the digital age, as your website is the business card of your company."
+  },
+  "services": {
+    "title": "Our Services:",
+    "btn": "Order Service",
+    "card1": {
+      "title": "Website Development:",
+      "subtitle": "We provide an innovative platform for creating, managing, and selling educational courses, allowing our clients.",
+      "services": {
+        "first": "Business Card Website",
+        "second": "Landing Page",
+        "third": "Multipage Website",
+        "fourth": "Online Store"
+      }
+    },
+    "card2": {
+      "title": "Design:",
+      "subtitle": "We provide an innovative platform for creating, managing, and selling educational courses, allowing our clients.",
+      "services": {
+        "first": "Website Design",
+        "second": "UI/UX Systems Design",
+        "third": "Logo and Corporate Identity Creation",
+        "fourth": "Existing Elements Redesign"
+      }
+    },
+    "card3": {
+      "title": "Custom Development:",
+      "subtitle": "We provide an innovative platform for creating, managing, and selling educational courses, allowing our clients.",
+      "services": {
+        "first": "ERP Systems",
+        "second": "Online Store + Admin Panel",
+        "third": "Online Store + ERP System",
+        "fourth": "CRM Systems Development"
+      }
+    }
   }
 }

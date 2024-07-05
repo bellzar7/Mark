@@ -22,10 +22,11 @@ const Studio = () => {
         </div>
         <CustomButton
           icon={btnMsg}
-          variant={'studio'}
+          variant={'standard'}
           size={'sm'}
           className={style.box_btn}
           onClick={modalState.onOpen}
+          text={`${t('studio.btn')}`}
         />
       </div>
       <PopUp modalState={modalState} />

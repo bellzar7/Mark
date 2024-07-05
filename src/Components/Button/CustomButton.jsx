@@ -3,7 +3,7 @@ import styles from './CustomButton.module.css'
 import { useTranslation } from 'react-i18next'
 
 const CustomButton = memo(
-  ({ variant, icon, size, className, onClick, type }) => {
+  ({ variant, icon, size, className, onClick, type, text }) => {
     const [t] = useTranslation()
 
     return (
@@ -13,16 +13,10 @@ const CustomButton = memo(
         ${
           variant === 'standard'
             ? `${styles.standard}`
-            : variant === 'studio'
-            ? `${styles.standard}`
             : variant === 'reject'
             ? `${styles.reject}`
             : variant === 'header'
             ? `${styles.header}`
-            : variant === 'send'
-            ? `${styles.standard}`
-            : variant === 'back'
-            ? `${styles.reject}`
             : ''
         }`}
         style={
@@ -36,19 +30,7 @@ const CustomButton = memo(
         }
         onClick={onClick}
       >
-        {variant === 'standard'
-          ? `${t('header.btn_standard')}`
-          : variant === 'studio'
-          ? `${t('studio.btn')}`
-          : variant === 'header'
-          ? `${t('header.btn_standard')}`
-          : variant === 'reject'
-          ? `${t('header.btn_reject')}`
-          : variant === 'send'
-          ? `${t('popUp.btn_send')}`
-          : variant === 'back'
-          ? `${t('popUp.btn_back')}`
-          : ''}
+        {text}
         {icon && <img src={icon} alt={icon} />}
       </button>
     )

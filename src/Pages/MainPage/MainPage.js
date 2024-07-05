@@ -1,5 +1,12 @@
 import React from 'react'
-import { Advantages, Header, Steps, Studio, Logos } from '../../Modules'
+import {
+  Advantages,
+  Header,
+  Steps,
+  Studio,
+  Logos,
+  Services,
+} from '../../Modules'
 
 const MainPage = () => {
   return (
@@ -7,6 +14,7 @@ const MainPage = () => {
       <Header />
       <Studio />
       <Logos />
+      <Services />
       <Advantages />
       <Steps />
     </>

@@ -1,0 +1,289 @@
+@import "../../Constants/Variables"
+
+.wrap
+  padding-top: 100px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 40px
+  &_title
+    margin-bottom: 0
+    color: $on-primary
+    text-align: center
+    font-family: "TT Norms", sans-serif
+    font-size: 40px
+    font-style: normal
+    font-weight: 600
+    line-height: 48px
+  &_boxes
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    gap: 32px
+    padding: 0 24px
+    height: 700px
+
+
+.box
+  padding: 30px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 10px
+  border-radius: 30px
+  border: 1px solid #121212
+  background: #050505
+  box-sizing: border-box
+  height: auto
+  transition: transform 0.3s ease-in-out
+  &_img
+    height: 250px
+    width: 472px
+  &_texts
+    display: flex
+    flex-direction: column
+    gap: 32px
+    width: 100%
+    &__top
+      width: 100%
+      &_title
+        color: $on-primary
+        font-family: "TT Norms", sans-serif
+        font-size: 32px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        margin-bottom: 5px
+      &_subTitle
+        color: #686A71
+        font-family: "TT Norms", sans-serif
+        font-size: 16px
+        font-style: normal
+        font-weight: 450
+        line-height: 130%
+        align-self: stretch
+        margin-bottom: 0
+        width: 472px
+    &__bottom
+      display: flex
+      flex-direction: column
+      gap: 20px
+      &_box
+        display: flex
+        align-items: center
+        gap: 8px
+        &__img
+          width: 26px
+          height: 26px
+        &__price
+          padding: 4px 8px
+          border-radius: 15px
+          border: 1px solid #081F0D
+          background: #060D07
+          color: #158230
+          font-family: "TT Norms", sans-serif
+          font-size: 12px
+          font-style: normal
+          font-weight: 500
+          line-height: 16px
+          display: none
+        &__txt
+          color: $on-primary
+          font-family: "TT Norms", sans-serif
+          font-size: 18px
+          font-style: normal
+          font-weight: 450
+          line-height: normal
+    &__btnWrap
+      display: none
+      justify-content: center
+      align-items: center
+      &_btn
+        padding: 12px 48px
+  &:hover .box_texts__bottom_box__price
+    display: block
+  &:hover .box_texts__bottom_box__img
+    display: none
+  &:hover .box_texts__btnWrap
+    display: flex
+  &:hover
+    border-color: #0D571F
+    transform: scale(1.05)
+
+
+
+
+@media (max-width: 1820px)
+  .wrap
+    padding-top: 100px
+    padding-bottom: 20px
+    gap: 40px
+    &_boxes
+      gap: 20px
+      padding: 0 0
+      height: 700px
+
+
+  .box
+    padding: 30px
+    &_img
+      width: 100%
+      height: 220px
+    &_texts
+      &__top
+        &_title
+          font-size: 24px
+        &_subTitle
+          font-size: 16px
+          width: 303px
+      &__bottom
+        gap: 16px
+        &_box
+          &__txt
+            font-size: 16px
+      &__btnWrap
+        &_btn
+          padding: 12px 48px
+    &:hover
+      border-color: #0D571F
+      transform: scale(1.03)
+
+
+
+
+@media (max-width: 1200px)
+
+  .wrap
+    padding-top: 100px
+    padding-bottom: 40px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 40px
+    &_title
+      margin-bottom: 0
+      color: $on-primary
+      text-align: center
+      font-family: "TT Norms", sans-serif
+      font-size: 40px
+      font-style: normal
+      font-weight: 600
+      line-height: 48px
+    &_boxes
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: center
+      width: 100%
+      gap: 20px
+      padding: 0 0
+      height: auto
+
+
+  .box
+    padding: 0 20px 20px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 10px
+    border-radius: 32px
+    border: 1px solid #0D571F
+    background: #050505
+    box-sizing: border-box
+    height: auto
+    transition: none
+    width: 350px
+    &_img
+      height: 210px
+      width: 310px
+    &_texts
+      display: flex
+      flex-direction: column
+      gap: 32px
+      width: 100%
+      &__top
+        width: 100%
+        &_title
+          color: $on-primary
+          font-family: "TT Norms", sans-serif
+          font-size: 24px
+          font-style: normal
+          font-weight: 600
+          line-height: normal
+          margin-bottom: 5px
+        &_subTitle
+          color: #686A71
+          font-family: "TT Norms", sans-serif
+          font-size: 16px
+          font-style: normal
+          font-weight: 450
+          line-height: 130%
+          align-self: stretch
+          margin-bottom: 0
+          width: 310px
+      &__bottom
+        display: flex
+        flex-direction: column
+        gap: 16px
+        &_box
+          display: flex
+          align-items: center
+          gap: 8px
+          &__img
+            display: none
+          &__price
+            padding: 4px 8px
+            border-radius: 15px
+            border: 1px solid #081F0D
+            background: #060D07
+            color: #158230
+            font-family: "TT Norms", sans-serif
+            font-size: 12px
+            font-style: normal
+            font-weight: 500
+            line-height: 16px
+            display: block
+          &__txt
+            color: $on-primary
+            font-family: "TT Norms", sans-serif
+            font-size: 16px
+            font-style: normal
+            font-weight: 450
+            line-height: normal
+      &__btnWrap
+        display: flex
+        justify-content: center
+        align-items: center
+        &_btn
+          padding: 12px 48px
+    &:hover
+      transform: none
+
+@media (max-width: 720px)
+  .wrap
+    padding-top: 80px
+    gap: 10px
+    &_title
+      font-size: 24px
+
+  .box
+    border-radius: 24px
+    border: 1px solid #08260F
+    width: 320px
+    &_img
+      height: 190px
+      width: 100%
+    &_texts
+      &__top
+        &_subTitle
+          font-size: 15px
+          width: 100%
+      &__bottom
+        &_box
+          &__img
+            display: none
+    &:hover
+      transform: none
+      border-color: #08260F

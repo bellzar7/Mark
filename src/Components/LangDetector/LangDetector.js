@@ -10,7 +10,7 @@ import {
 import styles from './LangDetector.module.css'
 
 const LangDetector = () => {
-  const [i18n] = useTranslation()
+  const [_, i18n] = useTranslation()
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang)
