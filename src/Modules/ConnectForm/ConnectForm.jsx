@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import style from './ConnectForm.module.css'
 import { connectFormPhoto, connectFormPhoto2 } from '../../Assets/Images'
 import { btnArrow, iconName } from '../../Assets/Icons'
@@ -19,7 +19,7 @@ const ConnectForm = () => {
     register,
     handleSubmit,
     reset,
-    formState: { isSubmitSuccessful, errors, touchedFields },
+    formState: { errors, touchedFields },
   } = useForm({ mode: 'all' })
 
   const [phone, setPhone] = useState('')
