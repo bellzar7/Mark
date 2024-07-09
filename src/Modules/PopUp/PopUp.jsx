@@ -8,7 +8,7 @@ import { CustomButton, Toastify } from '../../Components'
 import { memo, useEffect, useRef, useState } from 'react'
 import { random } from 'lodash'
 import { sendInTg } from '../../Constants/functions'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 import { useTranslation } from 'react-i18next'
 import { Checkbox } from '@nextui-org/react'
 
@@ -62,6 +62,9 @@ const PopUp = memo(({ modalState }) => {
   }, [isSubmitSuccessful])
 
   const onSubmit = async ({ name, email }) => {
+    if (toastId.current) {
+      toast.dismiss(toastId.current)
+    }
     toastId.current = toast(<Toastify type={'pending'} />, {
       autoClose: 3000,
       hideProgressBar: true,
@@ -100,7 +103,6 @@ const PopUp = memo(({ modalState }) => {
 
   return (
     <>
-      <ToastContainer />
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
