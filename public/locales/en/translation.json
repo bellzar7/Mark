@@ -84,5 +84,22 @@
         "fourth": "CRM Systems Development"
       }
     }
+  },
+  "connectForm": {
+    "title": "Interested in development?",
+    "subtitle": "Leave a request and",
+    "subtitleSpan": "get -15%",
+    "subtitleNext": "on your first order",
+    "form": {
+      "inputName": {
+        "lbl": "Name",
+        "span": "(optional)",
+        "placeholder": "Enter your name"
+      },
+      "inputPhone": {
+        "lbl": "Phone number"
+      },
+      "btn": "Submit request"
+    }
   }
 }

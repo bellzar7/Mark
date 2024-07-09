@@ -86,15 +86,18 @@ const ConnectForm = () => {
       <div className={style.container}>
         <div className={style.box}>
           <div className={style.box_texts}>
-            <h2 className={style.box_texts__title}>Зацікавлений у розробці?</h2>
+            <h2 className={style.box_texts__title}>{t('connectForm.title')}</h2>
             <h3 className={style.box_texts__subtitle}>
-              Залишай заявку та <span>отримай -15%</span> на перше замовлення
+              {t('connectForm.subtitle')}{' '}
+              <span>{t('connectForm.subtitleSpan')}</span>{' '}
+              {t('connectForm.subtitleNext')}
             </h3>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className={style.box_form}>
             <div className={style.box_form__box}>
               <label htmlFor="name" className={style.box_form__box_lbl}>
-                {t('popUp.form.inputName.lbl')} <span>(необов’язково)</span>
+                {t('connectForm.form.inputName.lbl')}{' '}
+                <span>{t('connectForm.form.inputName.span')}</span>
               </label>
               <div
                 className={style.box_form__box_wrap}
@@ -114,7 +117,7 @@ const ConnectForm = () => {
                 <input
                   type="text"
                   id={'name'}
-                  placeholder={t('popUp.form.inputName.placeholder')}
+                  placeholder={t('connectForm.form.inputName.placeholder')}
                   className={style.box_form__box_wrap__inp}
                   {...register('name', {
                     required: false,
@@ -128,7 +131,7 @@ const ConnectForm = () => {
 
             <div className={style.box_form__box}>
               <label htmlFor="Phone" className={style.box_form__box_lbl}>
-                {t('popUp.form.inputPhone.lbl')}
+                {t('connectForm.form.inputPhone.lbl')}
               </label>
               <div
                 className={style.box_form__box_wrap}
@@ -156,7 +159,7 @@ const ConnectForm = () => {
             <div className={style.box_form__btnBox}>
               <CustomButton
                 variant={'standard'}
-                text={'Залишити заявку'}
+                text={t('connectForm.form.btn')}
                 icon={btnArrow}
                 type={'submit'}
                 size={'sm'}
