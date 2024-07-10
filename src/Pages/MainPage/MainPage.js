@@ -10,6 +10,7 @@ import {
   ConnectForm,
 } from '../../Modules'
 import { ToastContainer } from 'react-toastify'
+import { CtaForm } from '../../Modules/CTAForm/CTAForm'
 
 const MainPage = () => {
   return (
@@ -23,6 +24,7 @@ const MainPage = () => {
       <ConnectForm />
       <Advantages />
       <Steps />
+      <CtaForm />
     </>
   )
 }

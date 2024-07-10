@@ -56,7 +56,7 @@
     "btn": "Order Service",
     "card1": {
       "title": "Website Development:",
-      "subtitle": "We provide an innovative platform for creating, managing, and selling educational courses, allowing our clients.",
+      "subtitle": "Professional website development of any complexity for your company.",
       "services": {
         "first": "Business Card Website",
         "second": "Landing Page",
@@ -66,7 +66,7 @@
     },
     "card2": {
       "title": "Design:",
-      "subtitle": "We provide an innovative platform for creating, managing, and selling educational courses, allowing our clients.",
+      "subtitle": "Creating an attractive and impressive interface design, with a special emphasis on the primacy of mobile devices.",
       "services": {
         "first": "Website Design",
         "second": "UI/UX Systems Design",
@@ -76,7 +76,7 @@
     },
     "card3": {
       "title": "Custom Development:",
-      "subtitle": "We provide an innovative platform for creating, managing, and selling educational courses, allowing our clients.",
+      "subtitle": "Creation of unique UX systems, integration of functionality, selection of media elements and their implementation in the project.",
       "services": {
         "first": "ERP Systems",
         "second": "Online Store + Admin Panel",
@@ -100,6 +100,23 @@
         "lbl": "Phone number"
       },
       "btn": "Submit request"
+    }
+  },
+  "CTAForm": {
+    "titleFirst": "Scale your business",
+    "titleSecond": "with technology!",
+    "subtitleFirst": "Get exclusive statistics, industry news, and updates on our projects.",
+    "subtitleSecond": "Sign up today and receive special offers in our loyalty program.",
+    "form": {
+      "inputName": {
+        "lbl": "Name",
+        "span": "(optional)",
+        "placeholder": "Enter your name"
+      },
+      "inputPhone": {
+        "lbl": "Phone number"
+      },
+      "btn": "Submit"
     }
   }
 }

@@ -43,7 +43,7 @@ const ConnectForm = () => {
         toast.dismiss(toastId.current)
       }
       toastId.current = toast(<Toastify type={'pending'} />, {
-        autoClose: 3000,
+        autoClose: false,
         hideProgressBar: true,
       })
 
