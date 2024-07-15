@@ -1,3 +1,158 @@
+.wrap {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.wrap_title {
+  color: #F2F2F2;
+  text-align: center;
+  font-family: "TT Norms", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+}
 
+.case {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.case_rowCase {
+  flex-direction: row;
+}
+.case_revertCase {
+  flex-direction: row-reverse;
+}
+.case_box {
+  width: 560px;
+  height: 600px;
+  border-radius: 30px;
+  position: relative;
+}
+.case_box__img {
+  width: 100%;
+  height: 100%;
+}
+.case_box__btnWrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+}
+.case_box__btnWrap_btn {
+  position: relative;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  background: rgba(10, 132, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.case_box__btnWrap_btn:hover {
+  background: rgba(10, 132, 255, 0.25);
+}
+.case_box__btnWrap_btn:active {
+  background: rgba(10, 132, 255, 0.3);
+}
+.case_box__btnWrap_btn__overlay {
+  max-width: 170px;
+  width: 170px;
+  height: 90px;
+  position: absolute;
+  top: -60px;
+  right: 50%;
+  transform: translateX(27%);
+  visibility: hidden;
+}
+.case_box__btnWrap_btn__overlayHovered {
+  animation: moveTop 0.5s forwards;
+}
+.case_secondImg {
+  height: 600px;
+}
+
+@keyframes moveTop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (max-width: 1820px) {
+  .wrap {
+    padding-top: 80px;
+  }
+  .case {
+    gap: 20px;
+  }
+  .case_box {
+    width: 360px;
+    height: 480px;
+  }
+  .case_secondImg {
+    height: 480px;
+    width: 760px;
+  }
+}
+@media (max-width: 1200px) {
+  .wrap {
+    padding-top: 100px;
+  }
+  .case {
+    gap: 12px;
+  }
+  .case_box {
+    width: 228px;
+    height: 300px;
+  }
+  .case_secondImg {
+    height: 300px;
+    width: 484px;
+  }
+}
+@media (max-width: 720px) {
+  .wrap {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .wrap_title {
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .case {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .case_rowCase {
+    flex-direction: column;
+  }
+  .case_revertCase {
+    flex-direction: column;
+  }
+  .case_box {
+    width: 320px;
+    height: 240px;
+    border-radius: 24px;
+  }
+  .case_box__btnWrap {
+    padding: 12px;
+  }
+  .case_secondImg {
+    height: 460px;
+    width: 320px;
+  }
+}
 
 /*# sourceMappingURL=Cases.module.css.map */

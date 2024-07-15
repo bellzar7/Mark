@@ -113,6 +113,7 @@ const ConnectForm = () => {
                   className={style.box_form__box_wrap__img}
                   src={iconName}
                   alt="people"
+                  loading={'lazy'}
                 />
                 <input
                   type="text"

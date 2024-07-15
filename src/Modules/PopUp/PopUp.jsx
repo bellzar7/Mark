@@ -124,6 +124,7 @@ const PopUp = memo(({ modalState }) => {
                       onClick={close}
                       src={closeBtn}
                       alt="close"
+                      loading={'lazy'}
                     />
                   </div>
                   <p className={styles.form_top__second}>
@@ -153,6 +154,7 @@ const PopUp = memo(({ modalState }) => {
                         className={styles.form_bottom__box_wrap__img}
                         src={iconName}
                         alt="people"
+                        loading={'lazy'}
                       />
                       <input
                         type="text"
@@ -222,6 +224,7 @@ const PopUp = memo(({ modalState }) => {
                         className={styles.form_bottom__box_wrap__img}
                         src={iconMail}
                         alt="people"
+                        loading={'lazy'}
                       />
                       <input
                         type="text"

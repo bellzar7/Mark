@@ -28,7 +28,7 @@ const CustomButton = memo(
         onClick={onClick}
       >
         {text}
-        {icon && <img src={icon} alt={icon} />}
+        {icon && <img src={icon} alt={icon} loading={'lazy'} />}
       </button>
     )
   },
