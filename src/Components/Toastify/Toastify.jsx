@@ -25,7 +25,7 @@ const Toastify = ({ type }) => {
   if (type === 'success') {
     return (
       <div className={styles.wrap}>
-        <img src={iconDone} alt="done" />
+        <img src={iconDone} alt="done" loading={'lazy'} />
         <div className={styles.wrap_text}>
           <h3 className={styles.wrap_text__title}>
             {t('toastify.success.title')}
