@@ -33,7 +33,11 @@
   gap: 24px;
   border-radius: 30px;
   border: 1px solid #121212;
-  background: #050505;
+  background: rgb(5, 5, 5);
+}
+.advantages_card:hover {
+  border: 1px solid #0D571F;
+  background: rgba(5, 142, 38, 0.1);
 }
 
 .advantages_card_icon {

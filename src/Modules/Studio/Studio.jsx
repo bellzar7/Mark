@@ -13,7 +13,7 @@ const Studio = () => {
   const [t] = useTranslation()
 
   return (
-    <div className={style.wrap}>
+    <div className={style.wrap} id={'studio'}>
       <div className={`customContainer ${style.box}`}>
         <img src={studioIcon} alt="" className={style.box_img} />
         <div className={style.box_texts}>

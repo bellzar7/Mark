@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.5.1",
     "framer-motion": "^11.2.11",
     "google-libphonenumber": "^3.2.34",
     "i18next": "^23.11.5",

@@ -55,7 +55,7 @@ const Cases = () => {
   ]
 
   return (
-    <div className={`customContainer ${style.wrap}`}>
+    <div className={`customContainer ${style.wrap}`} id={'cases'}>
       <h2 className={style.wrap_title}>Наші кейси</h2>
       {casesData.map((caseItem, index) => (
         <Case

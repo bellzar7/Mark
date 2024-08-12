@@ -21,7 +21,11 @@ const MobHeader = memo(({ modalState }) => {
   let { onOpen } = modalState
 
   const scrollTo = (where) => {
-    scroller.scrollTo(where)
+    scroller.scrollTo(where, {
+      duration: 500,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    })
   }
 
   return (
@@ -95,7 +99,7 @@ const MobHeader = memo(({ modalState }) => {
           <DropdownMenu aria-label="Static Actions">
             <DropdownSection>
               <DropdownItem
-                onPress={() => scrollTo('asd')}
+                onPress={() => scrollTo('services')}
                 textValue={'services'}
               >
                 {t('header.nav1')}
@@ -104,7 +108,7 @@ const MobHeader = memo(({ modalState }) => {
                 {t('header.nav2')}
               </DropdownItem>
               <DropdownItem
-                onPress={() => scrollTo('asd')}
+                onPress={() => scrollTo('studio')}
                 textValue={'aboutUs'}
               >
                 {t('header.nav3')}
@@ -116,7 +120,7 @@ const MobHeader = memo(({ modalState }) => {
                 {t('header.nav4')}
               </DropdownItem>
               <DropdownItem
-                onPress={() => scrollTo('asd')}
+                onPress={() => scrollTo('footer')}
                 textValue={'contacts'}
               >
                 {t('header.nav5')}
