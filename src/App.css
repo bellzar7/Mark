@@ -37,4 +37,5 @@ body {
   overflow: auto;
   position: relative;
   background: #000!important;
+  user-select: none;
 }

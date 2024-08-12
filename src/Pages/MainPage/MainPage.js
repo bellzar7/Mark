@@ -8,9 +8,11 @@ import {
   Services,
   Cases,
   ConnectForm,
+  CtaForm,
+  Footer,
+  CookieConsentMessage,
 } from '../../Modules'
 import { ToastContainer } from 'react-toastify'
-import { CtaForm } from '../../Modules/CTAForm/CTAForm'
 
 const MainPage = () => {
   return (
@@ -25,6 +27,8 @@ const MainPage = () => {
       <Advantages />
       <Steps />
       <CtaForm />
+      <Footer />
+      <CookieConsentMessage />
     </>
   )
 }

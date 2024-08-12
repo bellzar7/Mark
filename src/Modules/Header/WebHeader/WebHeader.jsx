@@ -1,37 +1,48 @@
-import React, { memo } from 'react'
+import React, { memo, useMemo, useCallback } from 'react'
 import styles from './WebHeader.module.css'
 import { Link } from 'react-scroll'
 import { logo } from '../../../Assets/Images'
 import { CustomButton, LangDetector } from '../../../Components'
 import { useTranslation } from 'react-i18next'
 import { btnArrow } from '../../../Assets/Icons'
+import classNames from 'classnames'
+
+const NAV_ITEMS = [
+  { to: 'services', labelKey: 'header.nav1' },
+  { to: 'cases', labelKey: 'header.nav2' },
+  { to: 'studio', labelKey: 'header.nav3' },
+  { to: 'asd4', labelKey: 'header.nav4' },
+  { to: 'footer', labelKey: 'header.nav5' },
+]
 
 const WebHeader = memo(({ modalState }) => {
-  const [t] = useTranslation()
+  const { t } = useTranslation()
   const { onOpen } = modalState
+
+  const navLinks = useMemo(
+    () =>
+      NAV_ITEMS.map((item) => (
+        <Link
+          key={item.labelKey}
+          to={item.to}
+          className={styles.container_wrap__nav_item}
+        >
+          {t(item.labelKey)}
+        </Link>
+      )),
+    [t],
+  )
+
+  const handleButtonClick = useCallback(() => {
+    onOpen()
+  }, [onOpen])
 
   return (
     <header className={styles.wrap}>
-      <div className={`customContainer ${styles.container}`}>
+      <div className={classNames('customContainer', styles.container)}>
         <img src={logo} alt="logo" className={styles.container_logo} />
         <div className={styles.container_wrap}>
-          <nav className={styles.container_wrap__nav}>
-            <Link to={'asd'} className={styles.container_wrap__nav_item}>
-              {t('header.nav1')}
-            </Link>
-            <Link to={'asd'} className={styles.container_wrap__nav_item}>
-              {t('header.nav2')}
-            </Link>
-            <Link to={'asd'} className={styles.container_wrap__nav_item}>
-              {t('header.nav3')}
-            </Link>
-            <Link to={'asd'} className={styles.container_wrap__nav_item}>
-              {t('header.nav4')}
-            </Link>
-            <Link to={'asd'} className={styles.container_wrap__nav_item}>
-              {t('header.nav5')}
-            </Link>
-          </nav>
+          <nav className={styles.container_wrap__nav}>{navLinks}</nav>
           <div className={styles.container_wrap__center}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,14 +62,13 @@ const WebHeader = memo(({ modalState }) => {
           </div>
           <div className={styles.container_wrap__right}>
             <LangDetector />
-
             <CustomButton
-              variant={'header'}
+              variant="header"
               icon={btnArrow}
-              size={'md'}
+              size="md"
               className={styles.container_wrap__right_btn}
-              onClick={onOpen}
-              text={`${t('header.btn_standard')}`}
+              onClick={handleButtonClick}
+              text={t('header.btn_standard')}
             />
           </div>
         </div>

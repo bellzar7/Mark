@@ -1,0 +1,236 @@
+@import "../../Constants/Variables"
+
+.bg
+  background: #F4F4F4
+
+.wrap
+  position: relative
+  padding: 92px 32px
+  display: grid
+  grid-template-columns: auto 1fr 1fr
+  grid-template-rows: repeat(3, auto)
+  column-gap: 278px
+  &_logo
+    margin-bottom: 45px
+  &_links
+    grid-column: 1 / span 1
+    grid-row: 2
+    display: flex
+    align-items: center
+    gap: 20px
+    margin-bottom: 45px
+    &__link
+      cursor: pointer
+      text-decoration: none
+      color: #000
+      text-align: center
+      font-family: "TT Norms", sans-serif
+      font-size: 15px
+      font-style: normal
+      font-weight: 450
+      line-height: normal
+      position: relative
+      padding: 0 12px
+      &:hover
+        color: $accent
+        font-weight: 500
+      &:nth-of-type(4)
+        &::after
+          content: '+1'
+          position: absolute
+          right: 0
+          top: -12px
+          display: flex
+          padding: 2px 5px
+          justify-content: center
+          align-items: center
+          border-radius: 9999px
+          border: 1px solid #77DFDA
+          background: #C4ECEA
+          color: $accent
+          text-align: center
+          font-family: 'Inter', sans-serif
+          font-size: 10px
+          font-style: normal
+          font-weight: 500
+          line-height: 10px
+  &_rights
+    grid-column: 1 / span 1
+    grid-row: 3
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 8px
+    padding: 0 12px
+    &__txt
+      color: #000
+      text-align: center
+      font-family: "TT Norms", sans-serif
+      font-size: 16px
+      font-style: normal
+      font-weight: 450
+      line-height: normal
+      margin-right: 4px
+    &__label
+      border-radius: 500px
+      background: #FFF
+      display: flex
+      padding: 4px 8px
+      justify-content: center
+      align-items: center
+      color: #000
+      text-align: center
+      font-family: "TT Norms", sans-serif
+      font-size: 16px
+      font-style: normal
+      font-weight: 450
+      line-height: normal
+  &_contacts
+    grid-column: 2 / span 1
+    grid-row: 1
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 20px
+    &__txt
+      color: #C0C0C0
+      text-align: right
+      font-family: "TT Norms", sans-serif
+      font-size: 18px
+      font-style: normal
+      font-weight: 500
+      line-height: normal
+      margin-bottom: 4px
+    &__link
+      color: #000
+      text-align: right
+      font-family: "TT Norms", sans-serif
+      font-size: 28px
+      font-style: normal
+      font-weight: 700
+      line-height: 28px 
+  &_socials
+    grid-column: 2 / span 1
+    grid-row: 3
+    display: flex
+    align-items: center
+    gap: 32px
+    &__img
+      width: 24px
+      height: 24px
+  &_scroll
+    grid-column: 3 / span 1
+    grid-row: 1
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 12px
+    text-decoration: none
+    transform: rotate(-90deg)
+    cursor: pointer
+    &__arrow
+      width: 16px
+      height: 17px
+      transform: rotate(90deg)
+    &__txt
+      color: #C0C0C0
+      font-family: 'TT Norms', sans-serif
+      font-size: 16px
+      font-style: normal
+      font-weight: 500
+      line-height: 20px
+
+
+@media (max-width: 1820px)
+  .wrap
+    column-gap: 0
+    &_links
+      gap: 4px
+    &_rights
+      flex-wrap: wrap
+    &_contacts
+      padding-right: 100px
+      padding-left: 100px
+    &_socials
+      padding-right: 100px
+      padding-left: 100px
+
+
+@media (max-width: 1200px)
+  .wrap
+    padding: 92px 0
+    grid-template-columns: repeat(2, auto)
+    grid-template-rows: repeat(3, auto)
+    &_logo
+      margin-bottom: 45px
+    &_links
+      grid-column: 2 / span 1
+      grid-row: 1
+      margin-left: -70px
+    &_rights
+      grid-column: 1 / span 2
+      grid-row: 3
+      &__txt
+        margin-right: auto
+    &_contacts
+      padding-right: 0
+      padding-left: 0
+      grid-column: 1 / span 1
+      grid-row: 2
+      margin-bottom: 45px
+    &_socials
+      grid-column: 2 / span 1
+      grid-row: 2
+      align-items: flex-end
+      justify-content: flex-end
+      margin-bottom: 45px
+      padding: 0 32px
+    &_scroll
+      display: none
+
+
+@media (max-width: 720px)
+  .wrap
+    padding: 40px 0
+    grid-template-columns: auto
+    grid-template-rows: repeat(4, auto)
+    justify-items: center
+    &_logo
+      margin-bottom: 32px
+      height: 32px
+    &_rights
+      grid-column: 1 / span 1
+      grid-row: 4
+      padding: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      gap: 11px
+      &__txt
+        margin-right: 0
+    &_contacts
+      padding-right: 0
+      padding-left: 0
+      grid-column: 1 / span 1
+      grid-row: 2
+      margin-bottom: 32px
+      align-items: center
+      gap: 12px
+      &__txt
+        font-size: 18px
+        line-height: normal
+      &__link
+        font-size: 20px
+        line-height: 20px
+    &_socials
+      grid-column: 1 / span 1
+      grid-row: 3
+      align-items: center
+      justify-content: center
+      margin-bottom: 32px
+      padding: 0
+    &_links
+      display: none
+    &_scroll
+      display: none

@@ -102,6 +102,63 @@
       "btn": "Submit request"
     }
   },
+
+  "advantages": {
+    "title": "Our Advantages",
+    "card1": {
+      "title": "Modern Design",
+      "txt": "Our team consists of experienced designers who will create an original and modern design for your website."
+    },
+    "card2": {
+      "title": "Responsiveness",
+      "txt": "All the websites we create will look great on 4K screens, Apple devices, and mobile devices."
+    },
+    "card3": {
+      "title": "Speed",
+      "txt": "Fast websites provide a better user experience, increase the likelihood of completing desired actions, and improve conversion rates."
+    },
+    "card4": {
+      "title": "Optimal Technologies",
+      "txt": "A positive experience with modern technologies directly boosts user loyalty to the company and product."
+    },
+    "card5": {
+      "title": "Conversion",
+      "txt": "Successful conversion leads to increased sales, attracting new customers, and enhancing loyalty."
+    },
+    "card6": {
+      "title": "Analytics",
+      "txt": "Using analytical tools allows for tracking visitor behavior and analyzing data."
+    }
+  },
+
+  "steps": {
+    "title": "Work Stages",
+    "card1": {
+      "title": "Client Needs and Requirements Analysis",
+      "txt": "At this initial stage, the team communicates with the client to gather information about the business, target audience, and expectations. This helps understand the main priorities and form a clear task for further work."
+    },
+    "card2": {
+      "title": "Project Planning",
+      "txt": "This stage includes drafting a contract that defines the terms of cooperation. Simultaneously, an advance payment is made, and a website concept is created, covering the overall structure and functionality of the future site."
+    },
+    "card3": {
+      "title": "Design Creation",
+      "txt": "This involves determining the placement of elements, color palette, fonts, and other important details. Following this, the design concept is developed, including the creation of prototypes and detailed resolution of all aspects of the web interface."
+    },
+    "card4": {
+      "title": "Development and Configuration",
+      "txt": "At this stage, the technical implementation of the project occurs. The team creates a functional and reliable site, ensuring compliance with all development standards and optimal performance and security."
+    },
+    "card5": {
+      "title": "Testing, Optimization & Edits",
+      "txt": "This stage includes testing on various devices and browsers, optimizing page load speed and SEO parameters. Additionally, any necessary edits and corrections are made. Payment is completed at this stage."
+    },
+    "card6": {
+      "title": "Launch & Support",
+      "txt": "The final stage, where the site is launched and full technical support is provided. The team assists in resolving any technical issues, ensuring the stable and successful operation of the site online."
+    }
+  },
+
   "CTAForm": {
     "titleFirst": "Scale your business",
     "titleSecond": "with technology!",
@@ -117,6 +174,30 @@
         "lbl": "Phone number"
       },
       "btn": "Submit"
+    }
+  },
+
+  "footer": {
+    "rights": {
+      "txt": "All rights reserved 2024",
+      "label1": "Privacy Policy",
+      "label2": "Cookies Policy",
+      "label3": "Contact"
+    },
+    "contacts": "Contact us:",
+    "scroll": "Scroll up"
+  },
+
+  "cookies": {
+    "title": "Cookie Usage Policy",
+    "subtitle": {
+      "first": "This website uses cookies to ensure proper functionality and improve user experience. Cookies",
+      "second": "do not store",
+      "third": "personal information!"
+    },
+    "btns": {
+      "first": "Accept",
+      "second": "Decline"
     }
   }
 }

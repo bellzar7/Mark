@@ -151,7 +151,7 @@ const ConnectForm = () => {
                     setPhone(e)
                   }}
                   value={phone}
-                  onBlur={() => {
+                  onFocus={() => {
                     setIsBlurredPhone(true)
                   }}
                 />

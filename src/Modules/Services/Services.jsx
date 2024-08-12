@@ -65,7 +65,7 @@ const Services = () => {
   ]
 
   return (
-    <div className={`customContainer ${style.wrap}`}>
+    <div className={`customContainer ${style.wrap}`} id={'services'}>
       <h2 className={style.wrap_title}>{t('services.title')}</h2>
       <div className={style.wrap_boxes}>
         {boxes.map((box, index) => {
