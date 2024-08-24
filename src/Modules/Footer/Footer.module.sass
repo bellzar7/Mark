@@ -12,6 +12,8 @@
   column-gap: 278px
   &_logo
     margin-bottom: 45px
+    width: 293px
+    height: 52px
   &_links
     grid-column: 1 / span 1
     grid-row: 2
@@ -108,7 +110,9 @@
       font-size: 28px
       font-style: normal
       font-weight: 700
-      line-height: 28px 
+      line-height: 28px
+      &:hover
+        color: $accent
   &_socials
     grid-column: 2 / span 1
     grid-row: 3
@@ -128,6 +132,11 @@
     text-decoration: none
     transform: rotate(-90deg)
     cursor: pointer
+    &:hover
+      .wrap_scroll__txt
+        color: $accent
+      .wrap_scroll__arrow path
+        fill: $accent
     &__arrow
       width: 16px
       height: 17px
