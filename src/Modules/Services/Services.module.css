@@ -36,17 +36,17 @@
   border: 1px solid #121212;
   background: #050505;
   box-sizing: border-box;
-  height: auto;
+  height: 603px;
   transition: transform 0.3s ease-in-out;
 }
 .box_img {
-  height: 250px;
-  width: 472px;
+  height: auto;
+  width: auto;
 }
 .box_texts {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
   width: 100%;
 }
 .box_texts__top {
@@ -71,6 +71,10 @@
   align-self: stretch;
   margin-bottom: 0;
   width: 472px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .box_texts__bottom {
   display: flex;
@@ -127,6 +131,7 @@
 .box:hover {
   border-color: #0D571F;
   transform: scale(1.05);
+  height: auto;
 }
 
 @media (max-width: 1820px) {
@@ -138,14 +143,15 @@
   .wrap_boxes {
     gap: 20px;
     padding: 0 0;
-    height: 700px;
+    height: 600px;
   }
   .box {
     padding: 30px;
+    height: auto;
   }
   .box_img {
-    width: 100%;
-    height: 220px;
+    width: auto;
+    height: auto;
   }
   .box_texts__top_title {
     font-size: 24px;
@@ -153,6 +159,10 @@
   .box_texts__top_subTitle {
     font-size: 16px;
     width: 303px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
   }
   .box_texts__bottom {
     gap: 16px;
@@ -162,6 +172,9 @@
   }
   .box_texts__btnWrap_btn {
     padding: 12px 48px;
+  }
+  .box:hover .box_texts__top_subTitle {
+    -webkit-line-clamp: 4;
   }
   .box:hover {
     border-color: #0D571F;
@@ -207,18 +220,18 @@
     border: 1px solid #0D571F;
     background: #050505;
     box-sizing: border-box;
-    height: auto;
+    height: 595px;
     transition: none;
     width: 350px;
   }
   .box_img {
-    height: 210px;
-    width: 310px;
+    height: auto;
+    width: auto;
   }
   .box_texts {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 20px;
     width: 100%;
   }
   .box_texts__top {
@@ -243,6 +256,8 @@
     align-self: stretch;
     margin-bottom: 0;
     width: 310px;
+    -webkit-line-clamp: 4;
+    height: 84px;
   }
   .box_texts__bottom {
     display: flex;
@@ -287,6 +302,7 @@
     padding: 12px 48px;
   }
   .box:hover {
+    height: 595px;
     transform: none;
   }
 }
@@ -301,20 +317,23 @@
   .box {
     border-radius: 24px;
     border: 1px solid #08260F;
-    width: 320px;
+    width: 100%;
+    height: auto;
   }
   .box_img {
-    height: 190px;
-    width: 100%;
+    height: auto;
+    width: auto;
   }
   .box_texts__top_subTitle {
     font-size: 15px;
     width: 100%;
+    height: auto;
   }
   .box_texts__bottom_box__img {
     display: none;
   }
   .box:hover {
+    height: auto;
     transform: none;
     border-color: #08260F;
   }

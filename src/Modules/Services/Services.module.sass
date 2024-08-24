@@ -36,15 +36,15 @@
   border: 1px solid #121212
   background: #050505
   box-sizing: border-box
-  height: auto
+  height: 603px
   transition: transform 0.3s ease-in-out
   &_img
-    height: 250px
-    width: 472px
+    height: auto
+    width: auto
   &_texts
     display: flex
     flex-direction: column
-    gap: 32px
+    gap: 20px
     width: 100%
     &__top
       width: 100%
@@ -66,6 +66,10 @@
         align-self: stretch
         margin-bottom: 0
         width: 472px
+        -webkit-line-clamp: 2
+        overflow: hidden
+        display: -webkit-box
+        -webkit-box-orient: vertical
     &__bottom
       display: flex
       flex-direction: column
@@ -111,6 +115,7 @@
   &:hover
     border-color: #0D571F
     transform: scale(1.05)
+    height: auto
 
 
 
@@ -123,14 +128,15 @@
     &_boxes
       gap: 20px
       padding: 0 0
-      height: 700px
+      height: 600px
 
 
   .box
     padding: 30px
+    height: auto
     &_img
-      width: 100%
-      height: 220px
+      width: auto
+      height: auto
     &_texts
       &__top
         &_title
@@ -138,6 +144,10 @@
         &_subTitle
           font-size: 16px
           width: 303px
+          -webkit-line-clamp: 2
+          overflow: hidden
+          display: -webkit-box
+          -webkit-box-orient: vertical
       &__bottom
         gap: 16px
         &_box
@@ -146,10 +156,12 @@
       &__btnWrap
         &_btn
           padding: 12px 48px
+    &:hover .box_texts__top_subTitle
+      -webkit-line-clamp: 4
     &:hover
       border-color: #0D571F
       transform: scale(1.03)
-
+      
 
 
 
@@ -192,16 +204,16 @@
     border: 1px solid #0D571F
     background: #050505
     box-sizing: border-box
-    height: auto
+    height: 595px
     transition: none
     width: 350px
     &_img
-      height: 210px
-      width: 310px
+      height: auto
+      width: auto
     &_texts
       display: flex
       flex-direction: column
-      gap: 32px
+      gap: 20px
       width: 100%
       &__top
         width: 100%
@@ -223,6 +235,8 @@
           align-self: stretch
           margin-bottom: 0
           width: 310px
+          -webkit-line-clamp: 4
+          height: 84px
       &__bottom
         display: flex
         flex-direction: column
@@ -259,6 +273,7 @@
         &_btn
           padding: 12px 48px
     &:hover
+      height: 595px
       transform: none
 
 @media (max-width: 720px)
@@ -271,19 +286,22 @@
   .box
     border-radius: 24px
     border: 1px solid #08260F
-    width: 320px
+    width: 100%
+    height: auto
     &_img
-      height: 190px
-      width: 100%
+      height: auto
+      width: auto
     &_texts
       &__top
         &_subTitle
           font-size: 15px
           width: 100%
+          height: auto
       &__bottom
         &_box
           &__img
             display: none
     &:hover
+      height: auto
       transform: none
       border-color: #08260F

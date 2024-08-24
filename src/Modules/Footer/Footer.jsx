@@ -8,8 +8,11 @@ import {
   inst_s,
   tg_h,
   tg_s,
-  arrowUp,
   logotype,
+  watsapp_s,
+  watsapp_h,
+  linkedin_s,
+  linkedin_h,
 } from '../../Assets/Icons'
 import { tel, mail, linkedinLink, instLink } from '../../Constants/socials'
 
@@ -29,8 +32,10 @@ const Footer = () => {
 
   const socialsData = useMemo(
     () => [
-      { normal: inst_s, hover: inst_h, link: instLink },
       { normal: tg_s, hover: tg_h, link: linkedinLink },
+      { normal: watsapp_s, hover: watsapp_h, link: linkedinLink },
+      { normal: inst_s, hover: inst_h, link: instLink },
+      { normal: linkedin_s, hover: linkedin_h, link: linkedinLink },
     ],
     [],
   )
@@ -92,11 +97,19 @@ const Footer = () => {
         </div>
         <Link to="studio" smooth duration={500} className={style.wrap_scroll}>
           <div className={style.wrap_scroll__txt}>{t('footer.scroll')}</div>
-          <img
-            src={arrowUp}
-            alt="arrowUp"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="17"
+            viewBox="0 0 16 17"
+            fill="none"
             className={style.wrap_scroll__arrow}
-          />
+          >
+            <path
+              d="M0.473649 8.28143C0.607001 8.42188 0.790101 8.50446 0.983649 8.51143C1.19112 8.51527 1.39067 8.43182 1.53365 8.28143L7.23364 2.58144V15.8015C7.23903 16.2135 7.57168 16.5461 7.98364 16.5515C8.39561 16.5461 8.72826 16.2135 8.73364 15.8015V2.58142L14.4336 8.28143C14.6248 8.47793 14.9062 8.55753 15.172 8.49024C15.4377 8.42296 15.6474 8.21902 15.722 7.95524C15.7966 7.69147 15.7248 7.40793 15.5336 7.21143L8.53365 0.21143C8.23655 -0.0704768 7.77075 -0.0704768 7.47365 0.21143L0.473649 7.21143C0.330118 7.35245 0.249268 7.54522 0.249268 7.74643C0.249268 7.94764 0.330118 8.14042 0.473649 8.28143Z"
+              fill="#C0C0C0"
+            />
+          </svg>
         </Link>
       </div>
     </div>

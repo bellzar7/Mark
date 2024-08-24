@@ -12,6 +12,8 @@
 }
 .wrap_logo {
   margin-bottom: 45px;
+  width: 293px;
+  height: 52px;
 }
 .wrap_links {
   grid-column: 1/span 1;
@@ -119,6 +121,9 @@
   font-weight: 700;
   line-height: 28px;
 }
+.wrap_contacts__link:hover {
+  color: #03CCC2;
+}
 .wrap_socials {
   grid-column: 2/span 1;
   grid-row: 3;
@@ -140,6 +145,12 @@
   text-decoration: none;
   transform: rotate(-90deg);
   cursor: pointer;
+}
+.wrap_scroll:hover .wrap_scroll__txt {
+  color: #03CCC2;
+}
+.wrap_scroll:hover .wrap_scroll__arrow path {
+  fill: #03CCC2;
 }
 .wrap_scroll__arrow {
   width: 16px;
