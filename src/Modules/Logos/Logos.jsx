@@ -16,8 +16,6 @@ import {
   optykaN,
   smileH,
   smileN,
-  tredH,
-  tredN,
   udH,
   udN,
 } from '../../Assets/Images'
@@ -34,7 +32,6 @@ const Logos = () => {
         gradientColor={'rgba(5, 5, 5, 0.85) 0%'}
       >
         <div className={style.marquee_box}>
-          <Logo logoN={tredN} logoH={tredH} />
           <Logo logoN={concreteN} logoH={concreteH} />
           <Logo logoN={ninaN} logoH={ninaH} />
           <Logo logoN={smileN} logoH={smileH} />

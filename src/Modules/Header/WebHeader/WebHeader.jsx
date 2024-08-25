@@ -1,11 +1,13 @@
 import React, { memo, useMemo, useCallback } from 'react'
 import styles from './WebHeader.module.css'
 import { Link } from 'react-scroll'
+import { Link as PageLink } from 'react-router-dom'
 import { logo } from '../../../Assets/Images'
 import { CustomButton, LangDetector } from '../../../Components'
 import { useTranslation } from 'react-i18next'
 import { btnArrow } from '../../../Assets/Icons'
 import classNames from 'classnames'
+import { WEBSITE_ROUTE } from '../../../Constants'
 
 const NAV_ITEMS = [
   { to: 'services', labelKey: 'header.nav1' },
@@ -23,6 +25,8 @@ const WebHeader = memo(({ modalState }) => {
     () =>
       NAV_ITEMS.map((item) => (
         <Link
+          smooth
+          duration={500}
           key={item.labelKey}
           to={item.to}
           className={styles.container_wrap__nav_item}
@@ -40,7 +44,9 @@ const WebHeader = memo(({ modalState }) => {
   return (
     <header className={styles.wrap}>
       <div className={classNames('customContainer', styles.container)}>
-        <img src={logo} alt="logo" className={styles.container_logo} />
+        <PageLink to={WEBSITE_ROUTE}>
+          <img src={logo} alt="logo" className={styles.container_logo} />
+        </PageLink>
         <div className={styles.container_wrap}>
           <nav className={styles.container_wrap__nav}>{navLinks}</nav>
           <div className={styles.container_wrap__center}>
