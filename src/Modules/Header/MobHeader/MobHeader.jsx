@@ -133,7 +133,7 @@ const MobHeader = memo(({ modalState }) => {
               <DropdownItem isReadOnly={true} textValue={'lang'}>
                 <LangDetector />
               </DropdownItem>
-              <DropdownItem textValue={'btn'}>
+              <DropdownItem textValue={'btn'} className={styles.btnWrap}>
                 <CustomButton
                   variant={'header'}
                   icon={btnArrow}
