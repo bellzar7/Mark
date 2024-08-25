@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react'
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
+import { Link as PageLink } from 'react-router-dom'
 
 import style from './Footer.module.css'
 import {
@@ -15,6 +16,7 @@ import {
   linkedin_h,
 } from '../../Assets/Icons'
 import { tel, mail, linkedinLink, instLink } from '../../Constants/socials'
+import { COOKIES_ROUTE, POLICY_ROUTE, WEBSITE_ROUTE } from '../../Constants'
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -25,7 +27,7 @@ const Footer = () => {
       { to: 'cases', label: t('header.nav2') },
       { to: 'studio', label: t('header.nav3') },
       { to: 'asd4', label: t('header.nav4') },
-      { to: 'asd5', label: t('header.nav5') },
+      { to: 'footer', label: t('header.nav5') },
     ],
     [t],
   )
@@ -40,15 +42,23 @@ const Footer = () => {
     [],
   )
 
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
+  const date = new Date().getFullYear()
+
   return (
     <div className={style.bg} id={'footer'}>
       <div className={`customContainer ${style.wrap}`}>
-        <img
-          src={logotype}
-          alt="logo"
-          className={style.wrap_logo}
-          loading="lazy"
-        />
+        <PageLink to={WEBSITE_ROUTE}>
+          <img
+            src={logotype}
+            alt="logo"
+            className={style.wrap_logo}
+            loading="lazy"
+          />
+        </PageLink>
         <nav className={style.wrap_links}>
           {links.map(({ to, label }) => (
             <Link
@@ -64,17 +74,17 @@ const Footer = () => {
         </nav>
         <div className={style.wrap_rights}>
           <div className={style.wrap_rights__txt}>
-            © {t('footer.rights.txt')}
+            © {t('footer.rights.txt')} {date}
           </div>
-          <div className={style.wrap_rights__label}>
+          <PageLink to={POLICY_ROUTE} className={style.wrap_rights__label}>
             🚀{t('footer.rights.label1')}
-          </div>
-          <div className={style.wrap_rights__label}>
+          </PageLink>
+          <PageLink to={COOKIES_ROUTE} className={style.wrap_rights__label}>
             🔬{t('footer.rights.label2')}
-          </div>
-          <div className={style.wrap_rights__label}>
-            👋{t('footer.rights.label3')}
-          </div>
+          </PageLink>
+          {/*<div className={style.wrap_rights__label}>*/}
+          {/*  👋{t('footer.rights.label3')}*/}
+          {/*</div>*/}
         </div>
         <div className={style.wrap_contacts}>
           <div className={style.wrap_contacts__txt}>{t('footer.contacts')}</div>
@@ -95,7 +105,13 @@ const Footer = () => {
             />
           ))}
         </div>
-        <Link to="studio" smooth duration={500} className={style.wrap_scroll}>
+        <Link
+          to={''}
+          onClick={scrollToTop}
+          smooth
+          duration={500}
+          className={style.wrap_scroll}
+        >
           <div className={style.wrap_scroll__txt}>{t('footer.scroll')}</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -147,17 +147,19 @@
   }
   .box {
     padding: 30px;
-    height: auto;
+    height: 489px;
   }
   .box_img {
     width: auto;
     height: auto;
   }
   .box_texts__top_title {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 500;
   }
   .box_texts__top_subTitle {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 300;
     width: 303px;
     -webkit-line-clamp: 2;
     overflow: hidden;

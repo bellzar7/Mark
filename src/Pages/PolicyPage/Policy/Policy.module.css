@@ -1,0 +1,66 @@
+.policy {
+  background: #000000;
+  padding-top: 70px;
+  padding-bottom: 120px;
+}
+.policy_title {
+  color: #F2F2F2;
+  text-align: center;
+  font-family: "TT Norms", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+.policy_texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.policy_texts__title {
+  color: #FCA311;
+  text-align: justify;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+.policy_texts__prgrf {
+  color: #F2F2F2;
+  font-family: "TT Norms", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  align-self: stretch;
+  margin-bottom: 0;
+}
+.policy_label {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.policy_label__wrap {
+  color: #8F8F8F;
+  font-family: "TT Norms", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 16px;
+  background: #161616;
+}
+
+/*# sourceMappingURL=Policy.module.css.map */

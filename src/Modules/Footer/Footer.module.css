@@ -170,6 +170,10 @@
   .wrap {
     column-gap: 0;
   }
+  .wrap_logo {
+    width: 230px;
+    height: 40px;
+  }
   .wrap_links {
     gap: 4px;
   }
@@ -190,9 +194,6 @@
     padding: 92px 0;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
-  }
-  .wrap_logo {
-    margin-bottom: 45px;
   }
   .wrap_links {
     grid-column: 2/span 1;
@@ -234,7 +235,8 @@
   }
   .wrap_logo {
     margin-bottom: 32px;
-    height: 32px;
+    height: 30px;
+    width: 170px;
   }
   .wrap_rights {
     grid-column: 1/span 1;

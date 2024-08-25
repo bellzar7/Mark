@@ -1,7 +1,9 @@
 const WEBSITE_ROUTE = '/'
 const ERROR_ROUTE = '/404'
+const POLICY_ROUTE = '/policy'
+const COOKIES_ROUTE = '/cookies'
 
-export { WEBSITE_ROUTE, ERROR_ROUTE }
+export { WEBSITE_ROUTE, ERROR_ROUTE, POLICY_ROUTE, COOKIES_ROUTE }
 
 const baseURL = 'https://znayeshapi.pythonanywhere.com/api/v1.0/send_bot'
 const validator =
