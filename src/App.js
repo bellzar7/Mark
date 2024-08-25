@@ -2,12 +2,13 @@ import { BrowserRouter } from 'react-router-dom'
 //import ReCAPTCHA from 'react-google-recaptcha'
 
 import './App.css'
-import { AppRouter } from './Components'
+import { AppRouter, ScrollToTop } from './Components'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <AppRouter />
       </BrowserRouter>
       {/*<ReCAPTCHA*/}
