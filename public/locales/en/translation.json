@@ -199,5 +199,53 @@
       "first": "Accept",
       "second": "Decline"
     }
+  },
+
+  "policy": {
+    "title": "Privacy Policy",
+    "subtitle": "Our Privacy Policy describes how we collect, use, and protect the information you provide when using our services.",
+    "box1": {
+      "title": "Information Collection and Use",
+      "subtitle": "We may collect various types of information, including personal data such as your name, email address, phone number, etc. When you use our services, this information is used solely for processing orders, communicating with you, and providing you with better service."
+    },
+    "box2": {
+      "title": "Information Protection",
+      "subtitle": "We place a high priority on protecting your information and take all possible measures to ensure its security. We do not disclose your personal data to third parties without your consent, except in cases required by law."
+    },
+    "box3": {
+      "title": "Control Over Your Information",
+      "subtitle": "You have the right to modify, delete, or update the information you provide to us at any time. If you have any requests regarding your personal information or our privacy policy, please contact us."
+    },
+    "box4": {
+      "title": "Changes to the Privacy Policy",
+      "subtitle": "We may periodically update this privacy policy, and any changes will be posted on our website. By continuing to use our services after changes have been made, you agree to the updated version of the privacy policy."
+    },
+    "label": "If you have any questions or concerns regarding our privacy policy, please contact us."
+  },
+
+  "cookiesPage": {
+    "title": "Cookie Policy",
+    "subtitle": "Our Cookie Policy describes how we use cookies and similar technologies to enhance your experience on our website.",
+    "box1": {
+      "title": "What Are Cookies?",
+      "subtitle": "Cookies are small text files stored on your device when you visit websites. They help the website remember information about your visit, which can make your next visit easier and the site more useful to you."
+    },
+    "box2": {
+      "title": "How Do We Use Cookies?",
+      "subtitle": "We use cookies for various purposes, including:",
+      "txt1": "Ensuring the proper functioning of our website;",
+      "txt2": "Remembering your preferences and settings;",
+      "txt3": "Analyzing traffic and improving site performance;",
+      "txt4": "Ensuring security and preventing fraud."
+    },
+    "box3": {
+      "title": "Control Over Cookies",
+      "subtitle": "You can control and manage cookies through your browser settings. You can delete all cookies already on your device and set your browser to prevent new cookies from being saved. Please note that if you disable cookies, some features of our site may not function properly."
+    },
+    "box4": {
+      "title": "Changes to the Cookie Policy",
+      "subtitle": "We may periodically update this cookie policy, and any changes will be posted on our website. By continuing to use our site after changes have been made, you agree to the updated version of the cookie policy."
+    },
+    "label": "If you have any questions or concerns regarding our cookie policy, please contact us."
   }
 }

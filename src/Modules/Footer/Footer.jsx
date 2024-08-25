@@ -15,7 +15,14 @@ import {
   linkedin_s,
   linkedin_h,
 } from '../../Assets/Icons'
-import { tel, mail, linkedinLink, instLink } from '../../Constants/socials'
+import {
+  tel,
+  mail,
+  linkedinLink,
+  instLink,
+  tgLink,
+  watsappLink,
+} from '../../Constants/socials'
 import { COOKIES_ROUTE, POLICY_ROUTE, WEBSITE_ROUTE } from '../../Constants'
 
 const Footer = () => {
@@ -34,8 +41,8 @@ const Footer = () => {
 
   const socialsData = useMemo(
     () => [
-      { normal: tg_s, hover: tg_h, link: linkedinLink },
-      { normal: watsapp_s, hover: watsapp_h, link: linkedinLink },
+      { normal: tg_s, hover: tg_h, link: tgLink },
+      { normal: watsapp_s, hover: watsapp_h, link: watsappLink },
       { normal: inst_s, hover: inst_h, link: instLink },
       { normal: linkedin_s, hover: linkedin_h, link: linkedinLink },
     ],

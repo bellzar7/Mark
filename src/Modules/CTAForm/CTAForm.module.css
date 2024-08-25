@@ -30,7 +30,7 @@
   padding: 7px 8px;
 }
 .wrapper_top__notiff_icons {
-  height: 24px;
+  height: 30px;
   width: 86.5px;
 }
 .wrapper_top__notiff_hand {
@@ -201,6 +201,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    width: 100%;
   }
   .wrapper_form__box {
     width: 100%;
