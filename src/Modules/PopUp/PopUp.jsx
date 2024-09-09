@@ -232,7 +232,7 @@ const PopUp = memo(({ modalState }) => {
                         placeholder={t('popUp.form.inputEmail.placeholder')}
                         className={styles.form_bottom__box_wrap__inp}
                         {...register('email', {
-                          required: true,
+                          required: false,
                           minLength: 2,
                           maxLength: 50,
                           pattern: {
