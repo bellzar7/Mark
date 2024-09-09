@@ -18,9 +18,6 @@ const sendInTg = async (msg) => {
       }
       return response
     })
-    // .then((data) => {
-    //   console.log(data)
-    // })
     .catch((error) => {
       console.error('Помилка при виконанні запиту:', error)
     })

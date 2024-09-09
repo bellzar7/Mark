@@ -16,15 +16,13 @@ const Services = () => {
       title: `${t('services.card1.title')}`,
       subTitle: `${t('services.card1.subtitle')}`,
       services: {
-        first: { name: `${t('services.card1.services.first')}`, price: '490$' },
+        first: { name: `${t('services.card1.services.first')}` },
         second: {
           name: `${t('services.card1.services.second')}`,
-          price: '790$',
         },
-        third: { name: `${t('services.card1.services.third')}`, price: '990$' },
+        third: { name: `${t('services.card1.services.third')}` },
         fourth: {
           name: `${t('services.card1.services.fourth')}`,
-          price: '1500$',
         },
       },
     },
@@ -33,15 +31,13 @@ const Services = () => {
       title: `${t('services.card2.title')}`,
       subTitle: `${t('services.card2.subtitle')}`,
       services: {
-        first: { name: `${t('services.card2.services.first')}`, price: '490$' },
+        first: { name: `${t('services.card2.services.first')}` },
         second: {
           name: `${t('services.card2.services.second')}`,
-          price: '790$',
         },
-        third: { name: `${t('services.card2.services.third')}`, price: '990$' },
+        third: { name: `${t('services.card2.services.third')}` },
         fourth: {
           name: `${t('services.card2.services.fourth')}`,
-          price: '1500$',
         },
       },
     },
@@ -50,15 +46,13 @@ const Services = () => {
       title: `${t('services.card3.title')}`,
       subTitle: `${t('services.card3.subtitle')}`,
       services: {
-        first: { name: `${t('services.card3.services.first')}`, price: '490$' },
+        first: { name: `${t('services.card3.services.first')}` },
         second: {
           name: `${t('services.card3.services.second')}`,
-          price: '790$',
         },
-        third: { name: `${t('services.card3.services.third')}`, price: '990$' },
+        third: { name: `${t('services.card3.services.third')}` },
         fourth: {
           name: `${t('services.card3.services.fourth')}`,
-          price: '1500$',
         },
       },
     },

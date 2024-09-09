@@ -23,9 +23,7 @@ const Box = ({ img, title, subTitle, services, modalState }) => {
               alt="done"
               className={style.box_texts__bottom_box__img}
             />
-            <span className={style.box_texts__bottom_box__price}>
-              {services.first.price}
-            </span>
+
             <span className={style.box_texts__bottom_box__txt}>
               {services.first.name}
             </span>
@@ -36,9 +34,7 @@ const Box = ({ img, title, subTitle, services, modalState }) => {
               alt="done"
               className={style.box_texts__bottom_box__img}
             />
-            <span className={style.box_texts__bottom_box__price}>
-              {services.second.price}
-            </span>
+
             <span className={style.box_texts__bottom_box__txt}>
               {services.second.name}
             </span>
@@ -49,9 +45,7 @@ const Box = ({ img, title, subTitle, services, modalState }) => {
               alt="done"
               className={style.box_texts__bottom_box__img}
             />
-            <span className={style.box_texts__bottom_box__price}>
-              {services.third.price}
-            </span>
+
             <span className={style.box_texts__bottom_box__txt}>
               {services.third.name}
             </span>
@@ -62,9 +56,7 @@ const Box = ({ img, title, subTitle, services, modalState }) => {
               alt="done"
               className={style.box_texts__bottom_box__img}
             />
-            <span className={style.box_texts__bottom_box__price}>
-              {services.fourth.price}
-            </span>
+
             <span className={style.box_texts__bottom_box__txt}>
               {services.fourth.name}
             </span>
