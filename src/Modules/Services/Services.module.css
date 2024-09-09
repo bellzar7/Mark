@@ -119,12 +119,6 @@
 .box_texts__btnWrap_btn {
   padding: 12px 48px;
 }
-.box:hover .box_texts__bottom_box__price {
-  display: block;
-}
-.box:hover .box_texts__bottom_box__img {
-  display: none;
-}
 .box:hover .box_texts__btnWrap {
   display: flex;
 }
@@ -271,9 +265,6 @@
     align-items: center;
     gap: 8px;
   }
-  .box_texts__bottom_box__img {
-    display: none;
-  }
   .box_texts__bottom_box__price {
     padding: 4px 8px;
     border-radius: 15px;
@@ -330,9 +321,6 @@
     font-size: 15px;
     width: 100%;
     height: auto;
-  }
-  .box_texts__bottom_box__img {
-    display: none;
   }
   .box:hover {
     height: auto;

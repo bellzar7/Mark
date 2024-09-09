@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'
-//import ReCAPTCHA from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-google-recaptcha'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 
 import './App.css'
@@ -13,10 +13,10 @@ function App() {
         <SpeedInsights />
         <AppRouter />
       </BrowserRouter>
-      {/*<ReCAPTCHA*/}
-      {/*  sitekey="6LceyBUpAAAAAJhzgCCekeruQ63xiMwp_9L5pfbo"*/}
-      {/*  size="invisible"*/}
-      {/*/>*/}
+      <ReCAPTCHA
+        sitekey="6Ld_FDwqAAAAADdM1ke4HgZ7jIylNEKxdRF-VVsX"
+        size="invisible"
+      />
     </div>
   )
 }
