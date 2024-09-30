@@ -22,7 +22,7 @@ const MainPage = () => {
       <Studio />
       <Logos />
       <Services />
-      <Cases />
+      {/*<Cases />*/}
       <ConnectForm />
       <Advantages />
       <Steps />
