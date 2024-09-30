@@ -20,7 +20,7 @@ const MainPage = () => {
       <ToastContainer />
       <Header />
       <Studio />
-      <Logos />
+      {/*<Logos />*/}
       <Services />
       {/*<Cases />*/}
       <ConnectForm />
