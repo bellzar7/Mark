@@ -1,0 +1,126 @@
+@import "../../Constants/Variables"
+.wrap
+  padding-top: 20px
+  padding-bottom: 20px
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  justify-content: space-between
+  box-sizing: border-box
+  overflow: hidden
+  &_top
+    width: 100%
+    padding: 12px 0
+    display: flex
+    align-items: center
+    gap: 8px
+    &__arrowWrap
+      padding: 8px
+    &__tabsWrap
+      padding: 8px
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 12px
+      flex: 1 0 0
+  &_middle
+    background-image: url("../../Assets/Images/quizGiftBg.webp")
+    background-size: contain
+    background-position: center
+    display: flex
+    align-items: center
+    justify-content: center
+    flex: 1 0 0
+    &__img
+      width: 242px
+      height: 226px
+  &_bottom
+    padding: 20px 16px
+    border-radius: 24px
+    border: 1px solid #EAECF0
+    background: #FFF
+    box-shadow: 1px 2px 20px 0 rgba(178, 178, 178, 0.20)
+
+.tab
+  height: 4px
+  border-radius: 9999px
+  background: rgba(255, 255, 255, 0.10)
+  flex: 1 0 0
+  transition: all 1s ease
+  &_active
+    @extend .tab
+    background: rgba(255, 255, 255, 0.40)
+  &_finish
+    @extend .tab
+    background: #096EE1
+
+.box
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  justify-content: center
+  gap: 20px
+  &_title
+    color: #19191C
+    font-family: "Fixel Display", sans-serif
+    font-size: 20px
+    font-style: normal
+    font-weight: 600
+    line-height: 24px
+    margin-bottom: 4px
+    align-self: stretch
+    & > span
+      color: #096EE1
+  &_subtitle
+    color: #7E818B
+    font-family: "Fixel Display", sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: 18px
+    align-self: stretch
+    margin-bottom: 0
+  &_btn
+    @include btnStandard
+    justify-content: center
+    gap: 8px
+    height: 40px
+    width: 100%
+    &:disabled
+      background: #D0D5DD
+  &_btnDown
+    @include btnReject
+    width: 100%
+    justify-content: center
+    gap: 8px
+    height: 40px
+    border-radius: 14px
+    border: 1px solid #D0D5DD
+    background: #FFF
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05)
+    margin-top: 8px
+  &_questionTitle
+    color: #101828
+    font-family: "Fixel Display", sans-serif
+    font-size: 18px
+    font-style: normal
+    font-weight: 600
+    line-height: 22px
+    align-self: stretch
+    margin-bottom: 12px
+  &_radioBtn
+    display: flex
+    flex-direction: row-reverse
+    width: 100%
+    justify-content: space-between
+    color: #1D2331!important
+    font-family: "Fixel Display", sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: 500
+    line-height: 18px
+    & > label
+      display: flex!important
+      flex-direction: row!important
+

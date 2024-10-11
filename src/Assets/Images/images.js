@@ -12,6 +12,7 @@ import connectFormPhoto2 from './ConnectFormPhoto2.webp'
 import CTA_icons from './CTA_icons.webp'
 import CTA_handVave from './CTA_handVave.webp'
 import cookies from './cookies.webp'
+import quizGift from './quizGift.webp'
 
 export {
   logo,
@@ -28,4 +29,5 @@ export {
   CTA_handVave,
   CTA_icons,
   cookies,
+  quizGift,
 }

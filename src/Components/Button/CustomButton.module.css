@@ -20,6 +20,9 @@
 .standard:active {
   background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
 }
+.standard:disabled {
+  background: #D0D5DD;
+}
 
 .header {
   display: flex;
@@ -42,6 +45,9 @@
 }
 .header:active {
   background: linear-gradient(90deg, #00E0FF 10%, #0A2CE1 90%);
+}
+.header:disabled {
+  background: #D0D5DD;
 }
 
 .reject {

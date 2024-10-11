@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-Black.woff2') format('woff2'),
+    url('./FixelDisplay-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-BlackItalic.woff2') format('woff2'),
+    url('./FixelDisplay-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-Bold.woff2') format('woff2'),
+    url('./FixelDisplay-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-BoldItalic.woff2') format('woff2'),
+    url('./FixelDisplay-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-ExtraBold.woff2') format('woff2'),
+    url('./FixelDisplay-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-ExtraBoldItalic.woff2') format('woff2'),
+    url('./FixelDisplay-ExtraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-ExtraLight.woff2') format('woff2'),
+    url('./FixelDisplay-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-ExtraLightItalic.woff2') format('woff2'),
+    url('./FixelDisplay-ExtraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-Light.woff2') format('woff2'),
+    url('./FixelDisplay-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-LightItalic.woff2') format('woff2'),
+    url('./FixelDisplay-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-Medium.woff2') format('woff2'),
+    url('./FixelDisplay-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-MediumItalic.woff2') format('woff2'),
+    url('./FixelDisplay-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-Regular.woff2') format('woff2'),
+    url('./FixelDisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-RegularItalic.woff2') format('woff2'),
+    url('./FixelDisplay-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-SemiBold.woff2') format('woff2'),
+    url('./FixelDisplay-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-SemiBoldItalic.woff2') format('woff2'),
+    url('./FixelDisplay-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-Thin.woff2') format('woff2'),
+    url('./FixelDisplay-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FixelDisplay';
+    src: url('./FixelDisplay-ThinItalic.woff2') format('woff2'),
+    url('./FixelDisplay-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
