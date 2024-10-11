@@ -56,6 +56,18 @@
 }
 .form_bottom__box {
   width: 100%;
+  position: relative;
+}
+.form_bottom__box_error {
+  position: absolute;
+  left: 0;
+  bottom: -25%;
+  color: red;
+  font-family: "Fixel Display", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 .form_bottom__box_lbl {
   color: #000;

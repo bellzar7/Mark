@@ -5,7 +5,7 @@ import { PhoneNumberUtil } from 'google-libphonenumber'
 import { closeBtn, iconMail, iconName } from '../../Assets/Icons'
 import { PhoneInput } from 'react-international-phone'
 import { CustomButton, Toastify } from '../../Components'
-import { memo, useEffect, useRef, useState } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import { random } from 'lodash'
 import { sendInTg } from '../../Constants/functions'
 import { toast } from 'react-toastify'
@@ -62,18 +62,18 @@ const PopUp = memo(({ modalState }) => {
   }, [isSubmitSuccessful])
 
   const onSubmit = async ({ name, email }) => {
-    if (toastId.current) {
-      toast.dismiss(toastId.current)
-    }
-    toastId.current = toast(<Toastify type={'pending'} />, {
-      autoClose: false,
-      hideProgressBar: true,
-    })
-
     let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nEmail - ${email}\n${
       videos[random(0, videos.length - 1)]
     }`
     if (isValid) {
+      if (toastId.current) {
+        toast.dismiss(toastId.current)
+      }
+      toastId.current = toast(<Toastify type={'pending'} />, {
+        autoClose: false,
+        hideProgressBar: true,
+      })
+
       let resp = await sendInTg(msg)
       if (resp.ok) {
         toast.update(toastId.current, {
@@ -95,10 +95,10 @@ const PopUp = memo(({ modalState }) => {
   }
 
   const redBord = {
-    boxShadow: 'inset 0px 0px 5px 5px rgba(255,0,0,.2)',
+    border: '1px solid rgba(255,0,0,1)',
   }
   const greenBord = {
-    boxShadow: 'inset 0px 0px 5px 5px rgba(100,255,100,.2)',
+    border: '1px solid rgba(100,255,100,1)',
   }
 
   return (
@@ -162,13 +162,26 @@ const PopUp = memo(({ modalState }) => {
                         placeholder={t('popUp.form.inputName.placeholder')}
                         className={styles.form_bottom__box_wrap__inp}
                         {...register('name', {
-                          required: true,
-                          minLength: 2,
-                          maxLength: 30,
+                          required: 'Це поле є обов`язкове для заповнення',
+                          minLength: {
+                            value: 2,
+                            message: 'Ім`я занадто коротке',
+                          },
+                          maxLength: {
+                            value: 30,
+                            message: 'Ім`я занадто довге',
+                          },
                         })}
                         autoComplete={'off'}
                       />
                     </div>
+                    {errors?.name && touchedFields?.name ? (
+                      <span className={styles.form_bottom__box_error}>
+                        {errors.name.message}
+                      </span>
+                    ) : (
+                      ''
+                    )}
                   </div>
 
                   <div className={styles.form_bottom__box}>
@@ -200,6 +213,13 @@ const PopUp = memo(({ modalState }) => {
                         }}
                       />
                     </div>
+                    {!isValid && isBlurredPhone ? (
+                      <span className={styles.form_bottom__box_error}>
+                        Введіть коректний номер телефону
+                      </span>
+                    ) : (
+                      ''
+                    )}
                   </div>
 
                   <div className={styles.form_bottom__box}>
@@ -233,15 +253,29 @@ const PopUp = memo(({ modalState }) => {
                         className={styles.form_bottom__box_wrap__inp}
                         {...register('email', {
                           required: false,
-                          minLength: 2,
-                          maxLength: 50,
                           pattern: {
                             value:
-                              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                            message: 'Невірний формат email',
+                          },
+                          minLength: {
+                            value: 2,
+                            message: 'Email занадто короткий',
+                          },
+                          maxLength: {
+                            value: 30,
+                            message: 'Email занадто довгий',
                           },
                         })}
                       />
                     </div>
+                    {errors?.email && touchedFields?.email ? (
+                      <span className={styles.form_bottom__box_error}>
+                        {errors.email.message}
+                      </span>
+                    ) : (
+                      ''
+                    )}
                   </div>
 
                   <div className={styles.form_bottom__box}>

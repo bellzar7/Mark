@@ -2,9 +2,10 @@ import React, { memo } from 'react'
 import styles from './CustomButton.module.css'
 
 const CustomButton = memo(
-  ({ variant, icon, size, className, onClick, type, text }) => {
+  ({ variant, icon, size, className, onClick, type, text, disabled }) => {
     return (
       <button
+        disabled={disabled}
         type={type}
         className={`${className}
         ${
