@@ -28,7 +28,7 @@
   text-decoration: none;
   color: #000;
   text-align: center;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 450;
@@ -54,7 +54,7 @@
   background: #C4ECEA;
   color: #03CCC2;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 500;
@@ -72,7 +72,7 @@
 .wrap_rights__txt {
   color: #000;
   text-align: center;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
@@ -88,7 +88,7 @@
   align-items: center;
   color: #000;
   text-align: center;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
@@ -105,7 +105,7 @@
 .wrap_contacts__txt {
   color: #C0C0C0;
   text-align: right;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -115,7 +115,7 @@
 .wrap_contacts__link {
   color: #000;
   text-align: right;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -159,7 +159,7 @@
 }
 .wrap_scroll__txt {
   color: #C0C0C0;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

@@ -9,11 +9,12 @@ import { PhoneNumberUtil } from 'google-libphonenumber'
 import { toast } from 'react-toastify'
 import { CustomButton, Toastify } from '../../Components'
 import { sendInTg } from '../../Constants/functions'
+import { useWindowSize } from '../../Components/Hooks'
 
 const ConnectForm = () => {
   const [t] = useTranslation()
 
-  const [windowWidth] = useState(window.innerWidth)
+  const { width } = useWindowSize()
 
   const {
     register,
@@ -170,7 +171,7 @@ const ConnectForm = () => {
           </form>
         </div>
         <img
-          src={windowWidth >= 1821 ? connectFormPhoto : connectFormPhoto2}
+          src={width >= 1821 ? connectFormPhoto : connectFormPhoto2}
           alt=""
           className={style.container_img}
         />
