@@ -24,7 +24,7 @@
 }
 .form_top__first_title {
   color: #19191C;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -42,7 +42,7 @@
 }
 .form_top__second {
   color: #7E818B;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 450;
@@ -71,7 +71,7 @@
 }
 .form_bottom__box_lbl {
   color: #000;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
@@ -80,7 +80,7 @@
 }
 .form_bottom__box_lbl span {
   color: #515C6D;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 450;
@@ -110,7 +110,7 @@
 }
 .form_bottom__box_wrap__inp::placeholder {
   color: #AAADB9;
-  font-family: "TT Norms", sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -129,7 +129,7 @@
   width: 100%;
   border: none !important;
   color: #000 !important;
-  font-family: "TT Norms", sans-serif !important;
+  font-family: "Gilroy", sans-serif !important;
   font-size: 14px !important;
   font-style: normal !important;
   font-weight: 400 !important;

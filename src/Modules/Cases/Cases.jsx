@@ -3,26 +3,19 @@ import style from './Cases.module.css'
 import { casesBtnArrow } from '../../Assets/Icons'
 import {
   casesBtnOverlay,
-  casesConcF,
-  casesConcFMob,
-  casesConcS,
-  casesConcSMob,
-  casesErovasF,
-  casesErovasFMob,
-  casesErovasS,
-  casesErovasSMob,
-  casesNinaF,
-  casesNinaFMob,
-  casesNinaS,
-  casesNinaSMob,
-  casesUsmailF,
-  casesUsmailFMob,
-  casesUsmailS,
-  casesUsmailSMob,
+  casesMastermF,
+  casesMastermFMob,
+  casesMastermS,
+  casesMastermSMob,
+  casesWebuF,
+  casesWebuFMob,
+  casesWebuS,
+  casesWebuSMob,
 } from '../../Assets/Images'
+import { useWindowSize } from '../../Components/Hooks'
 
 const Cases = () => {
-  const width = window.screen.width
+  const { width } = useWindowSize()
 
   const getImage = (desktopImg, mobileImg) =>
     width <= 720 ? mobileImg : desktopImg
@@ -30,27 +23,15 @@ const Cases = () => {
   const casesData = [
     {
       revert: false,
-      first: getImage(casesConcF, casesConcFMob),
-      second: getImage(casesConcS, casesConcSMob),
-      link: 'https://concrete-bureau.com/',
+      first: getImage(casesWebuF, casesWebuFMob),
+      second: getImage(casesWebuS, casesWebuSMob),
+      link: 'https://webuniverseua.com/showend',
     },
     {
       revert: true,
-      first: getImage(casesNinaS, casesNinaSMob),
-      second: getImage(casesNinaF, casesNinaFMob),
-      link: 'https://easter-baking.nina-leus.com.ua/',
-    },
-    {
-      revert: false,
-      first: getImage(casesUsmailF, casesUsmailFMob),
-      second: getImage(casesUsmailS, casesUsmailSMob),
-      link: 'https://usmilephilly.com/',
-    },
-    {
-      revert: true,
-      first: getImage(casesErovasS, casesErovasSMob),
-      second: getImage(casesErovasF, casesErovasFMob),
-      link: 'https://erovas.work/?page=1',
+      first: getImage(casesMastermS, casesMastermSMob),
+      second: getImage(casesMastermF, casesMastermFMob),
+      link: 'https://bellzar7.github.io/agency/',
     },
   ]
 

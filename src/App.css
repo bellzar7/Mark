@@ -1,5 +1,4 @@
-@import "Assets/Fonts/TTNorms/stylesheet.css";
-@import "Assets/Fonts/FixelDisplay/stylesheet.css";
+@import "Assets/Fonts/Gilroy/stylesheet.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
