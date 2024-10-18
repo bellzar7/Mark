@@ -34,8 +34,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 body {
-  overflow: auto;
   position: relative;
   background: #000!important;
   user-select: none;
+  overflow: auto;
+}
+img{
+  -webkit-user-drag: none;
 }

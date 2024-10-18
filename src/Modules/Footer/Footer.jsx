@@ -33,7 +33,7 @@ const Footer = () => {
       { to: 'services', label: t('header.nav1') },
       { to: 'cases', label: t('header.nav2') },
       { to: 'studio', label: t('header.nav3') },
-      { to: 'asd4', label: t('header.nav4') },
+      // { to: 'asd4', label: t('header.nav4') },
       { to: 'footer', label: t('header.nav5') },
     ],
     [t],

@@ -1,6 +1,42 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useRef } from 'react'
 import style from './steps.module.css'
 import { useTranslation } from 'react-i18next'
+import { useInView, motion } from 'framer-motion'
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, transform: 'translateX(-100px)' },
+  visible: {
+    opacity: 1,
+    transform: 'translateX(0)',
+    transition: {
+      duration: 0.7,
+      ease: [0.17, 0.55, 0.55, 1],
+    },
+  },
+}
+
+const textVariants = {
+  hidden: { opacity: 0, transform: 'translateX(50px)' },
+  visible: {
+    opacity: 1,
+    transform: 'translateX(0)',
+    transition: {
+      duration: 0.7,
+      ease: 'easeInOut',
+      delay: 0.06,
+    },
+  },
+}
 
 const Steps = () => {
   const { t } = useTranslation()
@@ -41,20 +77,46 @@ const Steps = () => {
     [t],
   )
 
+  const ref = useRef(null)
+  const isInView = useInView(ref, {
+    // once: true,
+    margin: '-10%',
+  })
+
   return (
     <div className={`customContainer ${style.steps_block}`}>
       <h2 className={style.steps_heading}>{t('steps.title')}</h2>
-      <div className={style.steps_cards_block}>
+      <motion.div
+        className={style.steps_cards_block}
+        ref={ref}
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? 'visible' : 'hidden'}
+      >
         {stepsData.map(({ icon, title, text }, index) => (
-          <div key={index} className={style.steps_card}>
+          <motion.div
+            key={index}
+            className={style.steps_card}
+            variants={cardVariants}
+          >
             <div className={style.steps_icons_block}>{icon}</div>
             <div>
-              <h1 className={style.steps_card_heading}>{title}</h1>
-              <p className={style.steps_card_text}>{text}</p>
+              <motion.h3
+                className={style.steps_card_heading}
+                variants={textVariants}
+              >
+                {title}
+              </motion.h3>
+              <motion.p
+                className={style.steps_card_text}
+                variants={textVariants}
+              >
+                {text}
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

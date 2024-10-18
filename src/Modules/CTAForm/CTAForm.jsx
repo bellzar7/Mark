@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { PhoneNumberUtil } from 'google-libphonenumber'
 import { toast } from 'react-toastify'
-import { sendInTg } from '../../Constants/functions'
+import { getUTMParams, sendInTg } from '../../Constants/functions'
 
 const CtaForm = () => {
   const [t] = useTranslation()
@@ -44,8 +44,8 @@ const CtaForm = () => {
         autoClose: false,
         hideProgressBar: true,
       })
-
-      let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}`
+      const utmParams = getUTMParams()
+      let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nUTMS:\nutm_source: ${utmParams.utm_source}\nutm_medium: ${utmParams.utm_medium}\nutm_campaign: ${utmParams.utm_campaign}\nutm_content: ${utmParams.utm_content}`
 
       let resp = await sendInTg(msg)
       if (resp.ok) {

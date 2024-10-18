@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import style from './Services.module.css'
 import { Box } from './Box'
 import { serviceFrst, serviceScnd, serviceThrd } from '../../Assets/Images'
 import { useDisclosure } from '@nextui-org/react'
 import { PopUp } from '../PopUp'
 import { useTranslation } from 'react-i18next'
+import { useInView, motion } from 'framer-motion'
 
 const Services = () => {
   const [t] = useTranslation()
@@ -58,25 +59,62 @@ const Services = () => {
     },
   ]
 
+  const ref = useRef(null)
+  const isInView = useInView(ref, {
+    once: false,
+    margin: '-30%',
+  })
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        staggerChildren: 0.5,
+      },
+    },
+  }
+
+  const cardVariants = {
+    hidden: { opacity: 0, transform: 'translateY(-50px)' },
+    visible: {
+      opacity: 1,
+      transform: 'translateY(0)',
+      transition: {
+        duration: 0.5,
+      },
+    },
+  }
+
   return (
-    <div className={`customContainer ${style.wrap}`} id={'services'}>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      ref={ref}
+      className={`customContainer ${style.wrap}`}
+      id={'services'}
+    >
       <h2 className={style.wrap_title}>{t('services.title')}</h2>
       <div className={style.wrap_boxes}>
         {boxes.map((box, index) => {
           return (
-            <Box
-              key={index}
-              img={box.img}
-              title={box.title}
-              subTitle={box.subTitle}
-              services={box.services}
-              modalState={modalState}
-            />
+            <motion.div variants={cardVariants} key={index}>
+              <Box
+                img={box.img}
+                title={box.title}
+                subTitle={box.subTitle}
+                services={box.services}
+                modalState={modalState}
+                variants={cardVariants}
+              />
+            </motion.div>
           )
         })}
       </div>
       <PopUp modalState={modalState} />
-    </div>
+    </motion.div>
   )
 }
 

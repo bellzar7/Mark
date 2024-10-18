@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { PhoneNumberUtil } from 'google-libphonenumber'
 import { toast } from 'react-toastify'
 import { CustomButton, Toastify } from '../../Components'
-import { sendInTg } from '../../Constants/functions'
+import { getUTMParams, sendInTg } from '../../Constants/functions'
 import { useWindowSize } from '../../Components/Hooks'
 
 const ConnectForm = () => {
@@ -47,8 +47,8 @@ const ConnectForm = () => {
         autoClose: false,
         hideProgressBar: true,
       })
-
-      let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}`
+      const utmParams = getUTMParams()
+      let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nUTMS:\nutm_source: ${utmParams.utm_source}\nutm_medium: ${utmParams.utm_medium}\nutm_campaign: ${utmParams.utm_campaign}\nutm_content: ${utmParams.utm_content}`
 
       let resp = await sendInTg(msg)
       if (resp.ok) {

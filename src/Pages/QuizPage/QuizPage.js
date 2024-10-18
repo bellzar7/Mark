@@ -38,41 +38,6 @@ const shakeAnimation = {
   },
 }
 const QuizPage = () => {
-  useEffect(() => {
-    ;(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return
-      n = f.fbq = function () {
-        n.callMethod
-          ? n.callMethod.apply(n, arguments)
-          : n.queue.push(arguments)
-      }
-      if (!f._fbq) f._fbq = n
-      n.push = n
-      n.loaded = !0
-      n.version = '2.0'
-      n.queue = []
-      t = b.createElement(e)
-      t.async = !0
-      t.src = v
-      s = b.getElementsByTagName(e)[0]
-      s.parentNode.insertBefore(t, s)
-    })(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js',
-    )
-
-    window.fbq('init', '1253461112452761')
-    window.fbq('track', 'PageView')
-    window.fbq('track', 'Purchase')
-    window.fbq('track', 'Lead')
-
-    return () => {
-      window.fbq('consent', 'revoke')
-    }
-  }, [])
-
   const [questionNumber, setQuestionNumber] = useState(1)
 
   const [firstQ, setFirstQ] = useState()
@@ -561,6 +526,12 @@ const QuizPage = () => {
                 type={'submit'}
                 text={`Завершити`}
                 disabled={!isValid || errors?.name || errors?.email}
+                onClick={() => {
+                  window.fbq('track', 'Lead', {
+                    content_name: 'Lead Button',
+                    content_category: 'button_click',
+                  })
+                }}
               />
             </div>
           </form>

@@ -13,7 +13,7 @@ const NAV_ITEMS = [
   { to: 'services', labelKey: 'header.nav1' },
   { to: 'cases', labelKey: 'header.nav2' },
   { to: 'studio', labelKey: 'header.nav3' },
-  { to: 'asd4', labelKey: 'header.nav4' },
+  // { to: 'asd4', labelKey: 'header.nav4' },
   { to: 'footer', labelKey: 'header.nav5' },
 ]
 
