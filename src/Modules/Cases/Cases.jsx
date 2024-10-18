@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import style from './Cases.module.css'
 import { casesBtnArrow } from '../../Assets/Icons'
 import {
@@ -13,6 +13,7 @@ import {
   casesWebuSMob,
 } from '../../Assets/Images'
 import { useWindowSize } from '../../Components/Hooks'
+import { useInView } from 'framer-motion'
 
 const Cases = () => {
   const { width } = useWindowSize()
@@ -35,8 +36,14 @@ const Cases = () => {
     },
   ]
 
+  const ref = useRef(null)
+  const isInView = useInView(ref, {
+    // once: true,
+    margin: '-10%',
+  })
+
   return (
-    <div className={`customContainer ${style.wrap}`} id={'cases'}>
+    <div className={`customContainer ${style.wrap}`} id={'cases'} ref={ref}>
       <h2 className={style.wrap_title}>Наші кейси</h2>
       {casesData.map((caseItem, index) => (
         <Case
@@ -45,13 +52,23 @@ const Cases = () => {
           first={caseItem.first}
           second={caseItem.second}
           link={caseItem.link}
+          styleS={{
+            transform: `translateX(${isInView ? 0 : 500}px)`,
+            opacity: isInView ? 1 : 0,
+            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          }}
+          styleF={{
+            transform: `translateX(${isInView ? 0 : -500}px)`,
+            opacity: isInView ? 1 : 0,
+            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          }}
         />
       ))}
     </div>
   )
 }
 
-const Case = ({ revert, first, second, link }) => {
+const Case = ({ revert, first, second, link, styleF, styleS }) => {
   const [isHover, setIsHover] = useState(false)
 
   const handleMouseEnter = () => setIsHover(true)
@@ -63,7 +80,7 @@ const Case = ({ revert, first, second, link }) => {
         revert ? style.case_revertCase : style.case_rowCase
       }`}
     >
-      <div className={style.case_box}>
+      <div className={style.case_box} style={revert ? styleS : styleF}>
         <img
           src={first}
           alt="first"
@@ -95,6 +112,7 @@ const Case = ({ revert, first, second, link }) => {
         alt="second"
         className={style.case_secondImg}
         loading="lazy"
+        style={revert ? styleF : styleS}
       />
     </div>
   )

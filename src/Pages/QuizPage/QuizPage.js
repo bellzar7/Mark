@@ -23,7 +23,7 @@ import {
 import { quizGift } from '../../Assets/Images'
 import styles from '../../Modules/PopUp/PopUp.module.css'
 import { CustomButton } from '../../Components'
-import { sendInTg } from '../../Constants/functions'
+import { getUTMParams, sendInTg } from '../../Constants/functions'
 import animationDone from '../../Assets/Animations/AnumationDone.json'
 import { useNavigate } from 'react-router-dom'
 import { WEBSITE_ROUTE } from '../../Constants'
@@ -38,41 +38,6 @@ const shakeAnimation = {
   },
 }
 const QuizPage = () => {
-  useEffect(() => {
-    ;(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return
-      n = f.fbq = function () {
-        n.callMethod
-          ? n.callMethod.apply(n, arguments)
-          : n.queue.push(arguments)
-      }
-      if (!f._fbq) f._fbq = n
-      n.push = n
-      n.loaded = !0
-      n.version = '2.0'
-      n.queue = []
-      t = b.createElement(e)
-      t.async = !0
-      t.src = v
-      s = b.getElementsByTagName(e)[0]
-      s.parentNode.insertBefore(t, s)
-    })(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js',
-    )
-
-    window.fbq('init', '1253461112452761')
-    window.fbq('track', 'PageView')
-    window.fbq('track', 'Purchase')
-    window.fbq('track', 'Lead')
-
-    return () => {
-      window.fbq('consent', 'revoke')
-    }
-  }, [])
-
   const [questionNumber, setQuestionNumber] = useState(1)
 
   const [firstQ, setFirstQ] = useState()
@@ -111,7 +76,8 @@ const QuizPage = () => {
   }, [])
 
   const onSubmit = async ({ name, email }) => {
-    let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nEmail - ${email}\nfirstQ - ${firstQ}\nsecondQ - ${secondQ}\nthirdQ - ${thirdQ}`
+    const utmParams = getUTMParams()
+    let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nEmail - ${email}\nfirstQ - ${firstQ}\nsecondQ - ${secondQ}\nthirdQ - ${thirdQ}\nUTMS:\nutm_source: ${utmParams.utm_source}\nutm_medium: ${utmParams.utm_medium}\nutm_campaign: ${utmParams.utm_campaign}\nutm_content: ${utmParams.utm_content}`
     if (isValid) {
       let resp = await sendInTg(msg)
       if (resp.ok) {
@@ -561,6 +527,12 @@ const QuizPage = () => {
                 type={'submit'}
                 text={`Завершити`}
                 disabled={!isValid || errors?.name || errors?.email}
+                onClick={() => {
+                  window.fbq('track', 'Lead', {
+                    content_name: 'Lead Button',
+                    content_category: 'button_click',
+                  })
+                }}
               />
             </div>
           </form>

@@ -1,6 +1,7 @@
 .advantages_block
   padding-top: 60px
   padding-bottom: 60px
+  overflow: hidden
 
 .advantages_heading
   color: var(--Primary-on-primary, #F2F2F2)
@@ -35,6 +36,9 @@
   &:hover
     border: 1px solid #0D571F
     background: rgba(5, 142, 38, 0.1)
+    .advantages_card_heading , .advantages_card_text
+      animation: storm 0.7s ease-in-out both
+      animation-delay: 0.06s
 
 
 
@@ -62,6 +66,23 @@
   font-weight: 450
   line-height: 130%
   margin: 0
+
+
+
+@keyframes storm
+  0%
+    transform: translate3d( 0, 0, 0) translateZ(0)
+  25%
+    transform: translate3d( 3px, 0, 0) translateZ(0)
+  50%
+    transform: translate3d( -2px, 0, 0) translateZ(0)
+  75%
+    transform: translate3d( 1px, 0, 0) translateZ(0)
+  100%
+    transform: translate3d( 0, 0, 0) translateZ(0)
+
+
+
 
 @media (max-width: 1820px)
   .advantages_card

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  overflow: hidden;
 }
 .wrap_title {
   color: #F2F2F2;

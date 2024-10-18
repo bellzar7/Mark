@@ -116,12 +116,12 @@ const MobHeader = memo(({ modalState }) => {
               >
                 {t('header.nav3')}
               </DropdownItem>
-              <DropdownItem
-                onPress={() => scrollTo('asd')}
-                textValue={'vacancies'}
-              >
-                {t('header.nav4')}
-              </DropdownItem>
+              {/*<DropdownItem*/}
+              {/*  onPress={() => scrollTo('asd')}*/}
+              {/*  textValue={'vacancies'}*/}
+              {/*>*/}
+              {/*  {t('header.nav4')}*/}
+              {/*</DropdownItem>*/}
               <DropdownItem
                 onPress={() => scrollTo('footer')}
                 textValue={'contacts'}

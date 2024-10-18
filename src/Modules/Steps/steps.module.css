@@ -40,6 +40,10 @@
   border: 1px solid #0D2657;
   background: rgba(13, 38, 87, 0.1);
 }
+.steps_card:hover .steps_card_heading, .steps_card:hover .steps_card_text {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
 .steps_card:hover .steps_icons_block {
   background: #0D3789;
   color: #879DCA;
@@ -83,6 +87,23 @@
   margin: 0;
 }
 
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(3px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-2px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(1px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
 @media (max-width: 1820px) {
   .steps_card_heading {
     font-size: 20px;

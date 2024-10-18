@@ -7,7 +7,7 @@ import { PhoneInput } from 'react-international-phone'
 import { CustomButton, Toastify } from '../../Components'
 import React, { memo, useEffect, useRef, useState } from 'react'
 import { random } from 'lodash'
-import { sendInTg } from '../../Constants/functions'
+import { getUTMParams, sendInTg } from '../../Constants/functions'
 import { toast } from 'react-toastify'
 import { useTranslation } from 'react-i18next'
 import { Checkbox } from '@nextui-org/react'
@@ -62,8 +62,14 @@ const PopUp = memo(({ modalState }) => {
   }, [isSubmitSuccessful])
 
   const onSubmit = async ({ name, email }) => {
+    const utmParams = getUTMParams()
     let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nEmail - ${email}\n${
       videos[random(0, videos.length - 1)]
+    }
+    \nUTMS:\nutm_source: ${utmParams.utm_source}\nutm_medium: ${
+      utmParams.utm_medium
+    }\nutm_campaign: ${utmParams.utm_campaign}\nutm_content: ${
+      utmParams.utm_content
     }`
     if (isValid) {
       if (toastId.current) {
