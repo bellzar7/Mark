@@ -23,7 +23,7 @@ import {
 import { quizGift } from '../../Assets/Images'
 import styles from '../../Modules/PopUp/PopUp.module.css'
 import { CustomButton } from '../../Components'
-import { sendInTg } from '../../Constants/functions'
+import { getUTMParams, sendInTg } from '../../Constants/functions'
 import animationDone from '../../Assets/Animations/AnumationDone.json'
 import { useNavigate } from 'react-router-dom'
 import { WEBSITE_ROUTE } from '../../Constants'
@@ -76,7 +76,8 @@ const QuizPage = () => {
   }, [])
 
   const onSubmit = async ({ name, email }) => {
-    let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nEmail - ${email}\nfirstQ - ${firstQ}\nsecondQ - ${secondQ}\nthirdQ - ${thirdQ}`
+    const utmParams = getUTMParams()
+    let msg = `Заявка на консультацію:\nName - ${name}\nPhone - ${phone}\nEmail - ${email}\nfirstQ - ${firstQ}\nsecondQ - ${secondQ}\nthirdQ - ${thirdQ}\nUTMS:\nutm_source: ${utmParams.utm_source}\nutm_medium: ${utmParams.utm_medium}\nutm_campaign: ${utmParams.utm_campaign}\nutm_content: ${utmParams.utm_content}`
     if (isValid) {
       let resp = await sendInTg(msg)
       if (resp.ok) {
