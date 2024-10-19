@@ -10,6 +10,7 @@ import {
 } from '../../Assets/Icons'
 import { useTranslation } from 'react-i18next'
 import { useInView, motion } from 'framer-motion'
+import { useWindowSize } from '../../Components/Hooks'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -67,6 +68,7 @@ const AdvantageCard = memo(({ icon, alt, heading, text }) => (
 
 const Advantages = () => {
   const { t } = useTranslation()
+  const { width } = useWindowSize()
 
   const advantagesData = useMemo(
     () => [
@@ -112,7 +114,7 @@ const Advantages = () => {
 
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    // once: true,
+    once: width <= 720,
     margin: '-10%',
   })
 
