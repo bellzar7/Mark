@@ -38,7 +38,7 @@ const Cases = () => {
 
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    // once: true,
+    once: width <= 720,
     margin: '-10%',
   })
 

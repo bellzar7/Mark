@@ -6,10 +6,12 @@ import { useDisclosure } from '@nextui-org/react'
 import { PopUp } from '../PopUp'
 import { useTranslation } from 'react-i18next'
 import { useInView, motion } from 'framer-motion'
+import { useWindowSize } from '../../Components/Hooks'
 
 const Services = () => {
   const [t] = useTranslation()
   const modalState = useDisclosure()
+  const { width } = useWindowSize()
 
   const boxes = [
     {
@@ -61,7 +63,7 @@ const Services = () => {
 
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    once: false,
+    once: width <= 720,
     margin: '-30%',
   })
 
