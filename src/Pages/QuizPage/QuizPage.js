@@ -48,6 +48,18 @@ const QuizPage = () => {
   const [phone, setPhone] = useState('')
   const [isBlurredPhone, setIsBlurredPhone] = useState(false)
 
+  useEffect(() => {
+    const setVh = () => {
+      let vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+
+    window.addEventListener('resize', setVh)
+    setVh()
+
+    return () => window.removeEventListener('resize', setVh)
+  }, [])
+
   const incQuestionNumber = () => {
     setQuestionNumber((prevState) => prevState + 1)
   }

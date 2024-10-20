@@ -42,3 +42,6 @@ body {
 img{
   -webkit-user-drag: none;
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
