@@ -4,7 +4,7 @@ import {
   Header,
   Steps,
   Studio,
-  Logos,
+  // Logos,
   Services,
   Cases,
   ConnectForm,
@@ -20,7 +20,7 @@ const MainPage = () => {
       <ToastContainer />
       <Header />
       <Studio />
-      <Logos />
+      {/*<Logos />*/}
       <Services />
       <Cases />
       <ConnectForm />
