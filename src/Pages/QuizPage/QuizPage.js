@@ -25,7 +25,7 @@ import styles from '../../Modules/PopUp/PopUp.module.css'
 import { CustomButton } from '../../Components'
 import { getUTMParams, sendInTg } from '../../Constants/functions'
 import animationDone from '../../Assets/Animations/AnumationDone.json'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import { WEBSITE_ROUTE } from '../../Constants'
 
 const shakeAnimation = {
@@ -116,7 +116,7 @@ const QuizPage = () => {
     border: '1px solid rgba(100,255,100,1)',
   }
 
-  const navigate = useNavigate()
+  const router = useRouter()
 
   return (
     <div className={`customContainer ${s.wrap}`}>
@@ -567,13 +567,13 @@ const QuizPage = () => {
             <div>
               <button
                 className={s.box_btn}
-                onClick={() => navigate(WEBSITE_ROUTE)}
+                onClick={() => router.push(WEBSITE_ROUTE)}
               >
                 На головну
               </button>
               <button
                 className={s.box_btnDown}
-                onClick={() => navigate(WEBSITE_ROUTE)}
+                onClick={() => router.push(WEBSITE_ROUTE)}
               >
                 Детальніше про нас
               </button>

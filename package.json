@@ -2,59 +2,45 @@
   "name": "structure",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
   "dependencies": {
     "@nextui-org/react": "^2.4.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "@vercel/speed-insights": "^1.0.12",
     "classnames": "^2.5.1",
     "framer-motion": "^11.2.11",
     "google-libphonenumber": "^3.2.34",
     "i18next": "^23.11.5",
     "i18next-browser-languagedetector": "^8.0.0",
-    "i18next-http-backend": "^2.5.2",
+    "i18next-resources-to-backend": "^1.2.0",
     "lodash": "^4.17.21",
     "lottie-react": "^2.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.51.5",
     "react-i18next": "^14.1.2",
     "react-international-phone": "^4.3.0",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
     "react-toastify": "^10.0.5",
-    "web-vitals": "^2.1.4",
     "zustand": "^4.5.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "format": "prettier --write ."
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "^15.0.3",
+    "postcss": "^8.4.47",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.4.4"
   }

@@ -1,7 +1,7 @@
 import React, { memo, useMemo, useCallback } from 'react'
 import styles from './WebHeader.module.css'
 import { Link } from 'react-scroll'
-import { Link as PageLink } from 'react-router-dom'
+import PageLink from 'next/link'
 import { logo } from '../../../Assets/Images'
 import { CustomButton, LangDetector } from '../../../Components'
 import { useTranslation } from 'react-i18next'
@@ -44,7 +44,7 @@ const WebHeader = memo(({ modalState }) => {
   return (
     <header className={styles.wrap}>
       <div className={classNames('customContainer', styles.container)}>
-        <PageLink to={WEBSITE_ROUTE}>
+        <PageLink href={WEBSITE_ROUTE}>
           <img src={logo} alt="logo" className={styles.container_logo} />
         </PageLink>
         <div className={styles.container_wrap}>

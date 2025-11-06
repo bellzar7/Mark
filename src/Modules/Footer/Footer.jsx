@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
-import { Link as PageLink } from 'react-router-dom'
+import PageLink from 'next/link'
 
 import style from './Footer.module.css'
 import {
@@ -58,7 +58,7 @@ const Footer = () => {
   return (
     <div className={style.bg} id={'footer'}>
       <div className={`customContainer ${style.wrap}`}>
-        <PageLink to={WEBSITE_ROUTE}>
+        <PageLink href={WEBSITE_ROUTE}>
           <img
             src={logotype}
             alt="logo"
@@ -83,10 +83,10 @@ const Footer = () => {
           <div className={style.wrap_rights__txt}>
             © {t('footer.rights.txt')} {date}
           </div>
-          <PageLink to={POLICY_ROUTE} className={style.wrap_rights__label}>
+          <PageLink href={POLICY_ROUTE} className={style.wrap_rights__label}>
             🚀{t('footer.rights.label1')}
           </PageLink>
-          <PageLink to={COOKIES_ROUTE} className={style.wrap_rights__label}>
+          <PageLink href={COOKIES_ROUTE} className={style.wrap_rights__label}>
             🔬{t('footer.rights.label2')}
           </PageLink>
           {/*<div className={style.wrap_rights__label}>*/}

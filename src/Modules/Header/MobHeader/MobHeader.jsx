@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react'
 import styles from './MobHeader.module.css'
-import { Link as PageLink } from 'react-router-dom'
+import PageLink from 'next/link'
 import { scroller } from 'react-scroll'
 import { logo } from '../../../Assets/Images'
 import { useTranslation } from 'react-i18next'
@@ -33,7 +33,7 @@ const MobHeader = memo(({ modalState }) => {
   return (
     <header className={`customContainer ${styles.wrap}`}>
       <div className={styles.wrap_container}>
-        <PageLink to={WEBSITE_ROUTE}>
+        <PageLink href={WEBSITE_ROUTE}>
           <img src={logo} alt="logo" className={styles.wrap_container_logo} />
         </PageLink>
         <Dropdown
