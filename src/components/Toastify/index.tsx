@@ -1,41 +1,47 @@
 'use client'
 
+import { useTranslation } from 'react-i18next'
+import { Spinner } from '@nextui-org/react'
+import { iconDone } from '@/Assets/Icons'
+
 interface ToastifyProps {
-  type: 'pending' | 'success' | 'warning'
+  type: 'pending' | 'success'
 }
 
 export function Toastify({ type }: ToastifyProps) {
-  const config = {
-    pending: {
-      icon: '⏳',
-      title: 'Відправка...',
-      subtitle: 'Будь ласка, зачекайте',
-    },
-    success: {
-      icon: '✅',
-      title: 'Успішно!',
-      subtitle: 'Ваша заявка відправлена',
-    },
-    warning: {
-      icon: '⚠️',
-      title: 'Помилка!',
-      subtitle: 'Спробуйте пізніше',
-    },
-  }
+  const { t } = useTranslation()
 
-  const { icon, title, subtitle } = config[type]
-
-  return (
-    <div className="flex items-center gap-3 md:gap-4">
-      <div className="text-4xl">{icon}</div>
-      <div className="flex flex-col gap-1">
-        <div className="text-[#19191C] font-gilroy text-base md:text-xl font-medium leading-5">
-          {title}
-        </div>
-        <div className="text-[#7E818B] font-gilroy text-xs md:text-base font-normal leading-tight">
-          {subtitle}
+  if (type === 'pending') {
+    return (
+      <div className="flex items-center gap-3">
+        <Spinner color="default" />
+        <div className="flex flex-col gap-0">
+          <h3 className="m-0 font-gilroy text-base font-medium leading-5 text-[#19191C]">
+            {t('toastify.pending.title')}
+          </h3>
+          <p className="m-0 font-gilroy text-xs font-normal leading-tight text-[#7E818B]">
+            {t('toastify.pending.subTitle')}
+          </p>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  if (type === 'success') {
+    return (
+      <div className="flex items-center gap-3">
+        <img src={iconDone} alt="done" loading="lazy" />
+        <div className="flex flex-col gap-0">
+          <h3 className="m-0 font-gilroy text-base font-medium leading-5 text-[#19191C]">
+            {t('toastify.success.title')}
+          </h3>
+          <p className="m-0 font-gilroy text-xs font-normal leading-tight text-[#7E818B]">
+            {t('toastify.success.subTitle')}
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  return null
 }

@@ -137,7 +137,7 @@ export const PopUp = memo<PopUpProps>(({ modalState }) => {
                   className="flex items-center gap-2 px-4 py-3 border rounded-lg"
                   style={errors?.name && touchedFields?.name ? redBorder : !errors?.name && touchedFields?.name ? greenBorder : undefined}
                 >
-                  <Image src={iconName} alt="Name" width={20} height={20} />
+                  {iconName && typeof iconName !== 'string' && <Image src={iconName} alt="Name" width={20} height={20} />}
                   <input
                     type="text"
                     id="name"
@@ -184,7 +184,7 @@ export const PopUp = memo<PopUpProps>(({ modalState }) => {
                   className="flex items-center gap-2 px-4 py-3 border rounded-lg"
                   style={errors?.email && touchedFields?.email ? redBorder : !errors?.email && touchedFields?.email ? greenBorder : undefined}
                 >
-                  <Image src={iconMail} alt="Email" width={20} height={20} />
+                  {iconMail && typeof iconMail !== 'string' && <Image src={iconMail} alt="Email" width={20} height={20} />}
                   <input
                     type="text"
                     id="email"

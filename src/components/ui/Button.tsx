@@ -70,7 +70,7 @@ const Button = memo<ButtonProps>(
         {...props}
       >
         {text || children}
-        {icon && (
+        {icon && icon !== '' && typeof icon !== 'object' && (
           <Image
             src={icon}
             alt="button icon"
