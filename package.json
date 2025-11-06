@@ -30,9 +30,13 @@
     "react-international-phone": "^4.3.0",
     "react-scroll": "^1.9.0",
     "react-toastify": "^10.0.5",
-    "zustand": "^4.5.2"
+    "zustand": "^4.5.2",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/react-scroll": "^1.8.10",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",

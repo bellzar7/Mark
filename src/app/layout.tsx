@@ -1,16 +1,17 @@
+import type { Metadata } from 'next'
 import './globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'react-international-phone/style.css'
 import { Providers } from './providers'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Mark Digital Agency - Web Development & Digital Solutions',
   description: 'Professional web development, digital marketing, and IT solutions. We create modern websites, mobile apps, and digital experiences that drive business growth.',
-  keywords: 'web development, digital agency, mobile apps, IT solutions, digital marketing, website design',
+  keywords: 'web development, digital agency, mobile apps, IT solutions, digital marketing, website design, Ukraine, Kyiv',
   authors: [{ name: 'Mark Digital Agency' }],
   openGraph: {
     title: 'Mark Digital Agency - Web Development & Digital Solutions',
-    description: 'Professional web development, digital marketing, and IT solutions.',
+    description: 'Professional web development, digital marketing, and IT solutions that drive business growth.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Mark Digital Agency',
@@ -26,23 +27,22 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code', // Add your verification code
-  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="dark">
-        <Providers>
-          <div className="App">
-            {children}
-          </div>
-        </Providers>
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
