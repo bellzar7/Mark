@@ -1,3 +1,3 @@
 'use client'
 
-export { Studio } from '@/Modules'
+export { Studio } from './Studio'

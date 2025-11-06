@@ -1,3 +1,3 @@
 'use client'
 
-export { Header } from '@/Modules'
+export { Header } from './Header'
