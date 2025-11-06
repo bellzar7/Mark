@@ -8,6 +8,7 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
+  Button,
 } from '@nextui-org/react'
 import { EN, UA } from '@/Assets/Images'
 
@@ -33,10 +34,13 @@ export function LangDetector() {
   return (
     <Dropdown className="bg-black border border-gray-800">
       <DropdownTrigger>
-        <button className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-900 transition-colors">
+        <Button
+          variant="light"
+          className="flex items-center gap-2 px-3 py-2 min-w-0 h-auto bg-transparent hover:bg-gray-900 transition-colors data-[hover=true]:bg-gray-900"
+        >
           <Image src={langImage} alt={langName} width={20} height={14} />
           <span className="text-white text-sm font-gilroy">{langName}</span>
-        </button>
+        </Button>
       </DropdownTrigger>
 
       <DropdownMenu aria-label="Language selection">
